@@ -1,0 +1,42 @@
+# PowerShell
+*.ps1.bak
+*.psm1.bak
+*.psd1.bak
+
+# LDIF files (generated)
+*.ldf
+
+# Generated directories
+userldifpackets/
+userldifpackets/ous/
+userldifpackets/players/
+userldifpackets/managers/
+userldifpackets/allstars/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Windows
+[Tt]humbs.db
+*.lnk
+[Dd]esktop.ini
+
+# Logs
+*.log
+logs/
+
+# Temp files
+*~
+*.tmp
+*.temp
+
+# Personal/Environment specific files
+*.env
+*.user
+*.local
+*.private
+
+# MLB data directory (should be managed separately)
+data/mlb/
+data/mlb/baseballdatabank/ 

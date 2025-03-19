@@ -1,0 +1,18 @@
+# Auxiliary Class: auxMLB (Generated on 03/18/2025 13:18:38)
+# Version: 1.0
+dn: CN=auxMLB,CN=Schema,CN=Configuration,DC=mlb,DC=dev
+changetype: add
+objectClass: top
+objectClass: classSchema
+cn: auxMLB
+lDAPDisplayName: auxMLB
+governsID: 1.2.840.113556.1.8000.2554.2.1.1
+objectClassCategory: 3
+schemaIdGuid:: SO7H4wrM40a4kd1APqfegA==
+defaultHidingValue: FALSE
+systemOnly: FALSE
+possSuperiors: top
+rDNAttID: cn
+showInAdvancedViewOnly: TRUE
+adminDisplayName: auxMLB
+adminDescription: Auxiliary class for MLB schema extensions.
