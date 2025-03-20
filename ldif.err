@@ -1,9 +1,3 @@
-﻿Entry DN: CN=auxMLB,CN=Schema,CN=Configuration,DC=mlb,DC=dev
-changetype: modify
-Attribute 0) mayContain:teamID yearID lgID nameFirst nameLast nameGiven birthYear birthMonth birthDay birthCountry birthState birthCity deathYear deathMonth deathDay deathCountry deathState deathCity weight height bats throws debut finalGame retroID bbrefID G AB R H mlb2B mlb3B HR RBI SB CS BB SO IBB HBP SH SF GIDP W L ERA G_p GS CG SHO SV IPouts H_p ER HR_p BB_p SO_p BAOpp WP HBP_p BK BFP GF R_p teamName franchID divID div_rank DivWin WCWin LgWin WSWin attendance park_name park_alias city state country capacity opened closed surface roof_type dimensions_lf dimensions_cf dimensions_rf elevation league_name league_level division_name manager_id manager_first manager_last coach_type coach_id coach_first coach_last salary contract_start contract_end position position_detail roster_status transaction_type transaction_date from_team to_team draft_year draft_round draft_pick school_name school_type injury_type injury_date dl_type dl_start dl_end award_name award_year award_rank allstar_year allstar_game allstar_starter gold_glove_year gold_glove_pos silver_slugger_year silver_slugger_pos hof_year hof_votes hof_inducted jersey_number jersey_retired retired_team retired_date stat_type stat_value stat_date game_id game_date game_type game_number home_team away_team start_time end_time attendance_game weather wind_speed wind_direction temperature field_condition sky_condition precipitation delay_reason delay_minutes umpire_id umpire_first umpire_last umpire_position official_scorer translator broadcast_tv broadcast_radio broadcast_language promotion_name promotion_type promotion_item promotion_quantity milestone_type milestone_value milestone_date milestone_opponent milestone_location record_type record_value record_date record_broken record_holder
-
-Add error on entry starting on line 3: No Such Attribute
-The server side error is: 0x57 The parameter is incorrect.
-The extended server error is:
-00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+﻿Extraneous attribute name in a mod_spec list
+Failed on line 7.  The last token starts with '-'.
 An error has occurred in the program

@@ -1,0 +1,1016 @@
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Object Class Violation
+The server side error is: 0x207d An attempt was made to modify an object to include an attribute that is not legal for its class.
+The extended server error is:
+0000207D: UpdErr: DSID-03151E83, problem 6002 (OBJ_CLASS_VIOLATION), data 590089
+
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: No Such Attribute
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Entry modified successfully.
+
+1 entry modified successfully.
+
+The command has completed successfully
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+
+Connecting to "dc1_2k5.mlb.dev"
+Logging in as current user using SSPI
+Importing directory from file "C:\gh\setupdc2k5\temp.ldif"
+Loading entries
+1: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C091268, comment: Error in attribute conversion operation, data 0, v6708
+0 entries modified successfully.
+An error has occurred in the program
+

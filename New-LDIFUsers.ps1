@@ -62,7 +62,7 @@ changetype: add
 objectClass: organizationalUnit
 ou: MLB
 "@)
-[System.IO.File]::WriteAllText("$ouDir\mlb.ldf", $StringBuilder.ToString(), [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText("$ouDir\mlb.ldf", $StringBuilder.ToString(), [System.Text.Encoding]::ASCII)
 
 # Players OU
 [void]$StringBuilder.Clear()
@@ -74,7 +74,7 @@ changetype: add
 objectClass: organizationalUnit
 ou: Players
 "@)
-[System.IO.File]::WriteAllText("$ouDir\players.ldf", $StringBuilder.ToString(), [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText("$ouDir\players.ldf", $StringBuilder.ToString(), [System.Text.Encoding]::ASCII)
 
 # Managers OU
 [void]$StringBuilder.Clear()
@@ -86,7 +86,7 @@ changetype: add
 objectClass: organizationalUnit
 ou: Managers
 "@)
-[System.IO.File]::WriteAllText("$ouDir\managers.ldf", $StringBuilder.ToString(), [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText("$ouDir\managers.ldf", $StringBuilder.ToString(), [System.Text.Encoding]::ASCII)
 
 Write-Host "✅ OU LDIF files created in: $ouDir"
 
@@ -196,7 +196,7 @@ description: $description
 
             # Write individual LDIF file
             $ldifFile = Join-Path $roleDir "$($id.Substring(0, [Math]::Min(20, $id.Length))).ldf"
-            [System.IO.File]::WriteAllText($ldifFile, $StringBuilder.ToString(), [System.Text.Encoding]::UTF8)
+            [System.IO.File]::WriteAllText($ldifFile, $StringBuilder.ToString(), [System.Text.Encoding]::ASCII)
             
             $processedRecords++
             $processedInFile++

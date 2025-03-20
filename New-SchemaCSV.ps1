@@ -1,186 +1,219 @@
-#Requires -Version 7.0
-
+#requires -Version 7.0
+[CmdletBinding()]
 param (
-    [string[]]$CsvFolders = @(
-        "C:\data\mlb\baseballdatabank\core",
-        "C:\data\mlb\baseballdatabank\contrib"
-    ),
-    [string]$OutputFile = "schema\schema.csv"
+    [string[]]$CsvFolders             = @("C:\data\mlb\baseballdatabank\core", "C:\data\mlb\baseballdatabank\contrib"),
+    [string]$OutputFile               = "schema\schema.csv",
+    [string]$EntityColumn             = $null,
+    [switch]$ExportConflicts,
+    [string]$ConflictOutputFile       = "schema\conflicts.csv"
 )
 
+Write-Host "Script starting..."
+
+# Function to determine the data type of a column
+function Get-AttributeType {
+    param (
+        [string]$Name,
+        [object[]]$Values,
+        [string]$SourceFile
+    )
+
+    # Get the base filename without extension
+    $baseFileName = [System.IO.Path]::GetFileNameWithoutExtension($SourceFile).ToLower()
+
+    # Hardcode MultiValue for specific files and columns
+    if ($baseFileName -in @("batting", "pitching", "appearances", "fielding")) {
+        if ($Name -in @("teamID", "lgID")) {
+            return "MultiValue"
+        }
+    }
+
+    # For all other cases, just check if it's an integer or string
+    $nonNullValues = $Values | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
+    
+    # Default to String for empty/null columns
+    if ($null -eq $nonNullValues -or $nonNullValues.Count -eq 0) {
+        return "String"
+    }
+
+    # Check for integer type
+    $allInteger = $true
+    foreach ($value in $nonNullValues) {
+        if ($value -notmatch '^-?\d+$') {
+            $allInteger = $false
+            break
+        }
+    }
+
+    return $(if ($allInteger) { "Integer" } else { "String" })
+}
+
+# Function to generate a description for each attribute
 function Get-AttributeDescription {
     param (
         [string]$Name,
         [string]$SourceFile,
-        [array]$Values,
+        [object[]]$Values,
         [string]$Type
     )
 
-    if ($null -eq $Values -or $Values.Count -eq 0) {
-        return "MLB: Field from $SourceFile (No sample values available)"
+    $nonNullValues = $Values | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
+    if ($null -eq $nonNullValues -or $nonNullValues.Count -eq 0) {
+        return "No values found in $SourceFile"
     }
 
-    $nonEmptyValues = $Values | Where-Object { $_ }
-    $uniqueValues = $nonEmptyValues | Select-Object -Unique
-    $sampleValue = $uniqueValues | Select-Object -First 1
+    $uniqueValues = $nonNullValues | Select-Object -Unique
+    $totalValues = $Values.Count
+    $nullCount = ($Values | Where-Object { [string]::IsNullOrWhiteSpace($_) }).Count
+    $uniqueCount = $uniqueValues.Count
 
-    # Detect date-like fields
-    $isDateField = $nonEmptyValues -match '^\d{4}-\d{2}-\d{2}$' -or $nonEmptyValues -match '^\d{2}/\d{2}/\d{4}$'
-
-    # Assign description
-    $description = "MLB: "
-    if ($isDateField) {
-        $description += "Date field from $SourceFile (Format: YYYY-MM-DD)"
-    } elseif ($Type -eq "MultiValue") {
-        $description += "Multi-Value field from $SourceFile (Entity has multiple distinct values)"
-    } else {
-        $description += "Field from $SourceFile"
-        if ($sampleValue) { $description += " (Sample: $sampleValue)" }
-        if ($uniqueValues.Count -lt 15) { $description += " - Possible values: $($uniqueValues -join ', ')" }
-    }
-
-    return $description
-}
-
-function Get-AttributeType {
-    param (
-        [string]$Name,
-        [array]$Values,
-        [hashtable]$GroupedData
-    )
-    
-    if ($null -eq $Values -or $Values.Count -eq 0) { return "String" }
-
-    $nonEmptyValues = $Values | Where-Object { $_ }
-    
-    # Numeric Type Detection
-    $allNumbers = $true
-    $hasDecimal = $false
-
-    foreach ($val in $nonEmptyValues) {
-        if ($val -notmatch '^-?\d*\.?\d+$') { $allNumbers = $false }
-        if ($val -match '\.') { $hasDecimal = $true }
-    }
-
-    if ($allNumbers) { 
-        if ($hasDecimal) { 
-            return "String" 
-        } else { 
-            return "Integer" 
-        }
-    }
-    
-    # Check for MultiValue by seeing if one entity has multiple unique values
-    if ($GroupedData.ContainsKey($Name)) {
-        $multiValueCount = $GroupedData[$Name] | Where-Object { $_.UniqueValues.Count -gt 1 }
-        if ($multiValueCount.Count -gt 0) { return "MultiValue" }
-    }
-    
-    return "String"
+    return "Found in $SourceFile. $uniqueCount unique values out of $totalValues total values ($nullCount null/empty)"
 }
 
 try {
-    Write-Host "🔍 Analyzing CSV files in multiple directories..."
-    $uniqueAttributes = @{}
-    $totalFiles = 0
-    $typeCounts = @{ "String" = 0; "MultiValue" = 0; "Integer" = 0; "Double" = 0 }
-
+    Write-Host "Starting schema analysis..."
+    Write-Host "Processing folders: $($CsvFolders -join ', ')"
+    
+    # Get all CSV files
+    $csvFiles = @()
     foreach ($folder in $CsvFolders) {
-        if (-not (Test-Path $folder)) {
-            Write-Warning "⚠️ Folder not found, skipping: $folder"
-            continue
+        Write-Host "Checking folder: $folder"
+        if (Test-Path $folder) {
+            $files = Get-ChildItem -Path $folder -Filter "*.csv"
+            Write-Host "Found $($files.Count) CSV files in $folder"
+            $csvFiles += $files
+        } else {
+            Write-Warning "Folder not found: $folder"
         }
+    }
 
-        Write-Host "📂 Processing folder: $folder"
-        $files = Get-ChildItem $folder -Filter "*.csv" | Where-Object { $_.Name -notmatch '^schema_|analysis' }
+    Write-Host "Total files to process: $($csvFiles.Count)"
+    Write-Host ""
+
+    # Initialize tracking variables
+    $uniqueAttributes = @{}
+    $typeConflicts = @{}
+    $typeCounts = [ordered]@{
+        "Integer" = 0
+        "String" = 0
+        "MultiValue" = 0
+    }
+
+    # Hardcode MultiValue attributes upfront
+    $multiValueAttrs = @("batting", "appearances", "fielding", "pitching")
+    foreach ($attr in $multiValueAttrs) {
+        $uniqueAttributes[$attr] = [PSCustomObject]@{
+            SourceFile = "Hardcoded"
+            AttributeName = $attr
+            AttributeType = "MultiValue"
+            Description = "Hardcoded MultiValue attribute"
+            IsSingleValued = $false
+        }
+        $typeCounts["MultiValue"]++
+    }
+
+    # Process each file
+    foreach ($file in $csvFiles) {
+        Write-Host "Processing file: $($file.Name)"
         
-        if (-not $files) {
-            Write-Warning "⚠️ No CSV files found in $folder"
-            continue
-        }
+        # Import CSV
+        $csv = Import-Csv -Path $file.FullName
+        Write-Host "  Imported $($csv.Count) rows"
+        
+        # Get headers
+        $headers = $csv[0].PSObject.Properties.Name
+        Write-Host "  Found $($headers.Count) columns"
+        
+        # Process each column
+        foreach ($header in $headers) {
+            Write-Host "    Processing column: $header"
+            
+            # Get values for this column
+            $values = $csv.$header
+            
+            # Get AD-compliant header name
+            $adCompliantHeader = $header -replace '^[0-9]', 'X$0' -replace '[._]', '-'
+            
+            # Skip if this is a hardcoded MultiValue attribute
+            if ($adCompliantHeader -in $multiValueAttrs) {
+                continue
+            }
 
-        Write-Host "✅ Found $($files.Count) CSV files"
-        $totalFiles += $files.Count
-
-        foreach ($file in $files) {
-            Write-Host "  📄 Processing $($file.Name)"
-            try {
-                $csv = Import-Csv -Path $file.FullName
-                if ($null -eq $csv -or $csv.Count -eq 0) {
-                    Write-Warning "    ⚠️ Skipping empty CSV file: $($file.Name)"
-                    continue
-                }
-
-                $headers = $csv[0].PSObject.Properties.Name
-
-                # Detect entity column (first column)
-                $entityColumn = $headers[0]
-
-                # Group data by entity to detect multi-value fields
-                $groupedData = @{}
-                foreach ($header in $headers) {
-                    $groupedData[$header] = $csv | Group-Object -Property $entityColumn | 
-                        ForEach-Object { 
-                            [PSCustomObject]@{ 
-                                Entity = $_.Name
-                                UniqueValues = ($_.Group | Select-Object -ExpandProperty $header -Unique)
-                            }
-                        }
-                }
-
-                foreach ($header in $headers) {
-                    if (-not $uniqueAttributes.ContainsKey($header)) {
-                        $values = $csv | ForEach-Object { $_.$header }
-
-                        # Fix numeric attribute names for AD compliance
-                        $adCompliantHeader = if ($header -match '^[0-9]') { "X$header" } else { $header }
-                        
-                        # Replace dots with hyphens for AD compliance
-                        $adCompliantHeader = $adCompliantHeader.Replace(".", "-")
-                        $adCompliantHeader = $adCompliantHeader.Replace("_", "-")
-                        
-                        $type = Get-AttributeType -Name $adCompliantHeader -Values $values -GroupedData $groupedData
-                        $description = Get-AttributeDescription -Name $adCompliantHeader -SourceFile $file.Name -Values $values -Type $type
-
-                        # Count the types
-                        if ($typeCounts.ContainsKey($type)) {
-                            $typeCounts[$type]++
-                        }
-
-                        $uniqueAttributes[$adCompliantHeader] = [PSCustomObject]@{
-                            SourceFile = $file.Name
-                            AuxClass = "auxMLB"
-                            AttributeName = $adCompliantHeader
-                            AttributeType = $type
-                            Description = $description
-                            IsSingleValued = ($type -ne "MultiValue")  # Boolean instead of string
-                        }
+            # Get attribute type (only Integer or String)
+            $nonNullValues = $Values | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
+            if ($null -eq $nonNullValues -or $nonNullValues.Count -eq 0) {
+                $type = "String"
+            } else {
+                $allInteger = $true
+                foreach ($value in $nonNullValues) {
+                    if ($value -notmatch '^-?\d+$') {
+                        $allInteger = $false
+                        break
                     }
                 }
+                $type = if ($allInteger) { "Integer" } else { "String" }
             }
-            catch {
-                Write-Warning "    ⚠️ Error processing $($file.Name): $_"
+            Write-Host "    Type detected: $type"
+            
+            if ($uniqueAttributes[$adCompliantHeader]) {
+                $existing = $uniqueAttributes[$adCompliantHeader]
+                if ($existing.AttributeType -ne $type) {
+                    # Always resolve Integer vs String conflicts to String
+                    $resolvedType = "String"
+                    
+                    $typeConflicts[$adCompliantHeader] = @($existing.AttributeType, $type, $existing.SourceFile, $file.Name)
+                    $typeCounts[$existing.AttributeType]--
+                    $typeCounts[$resolvedType]++
+                    
+                    $uniqueAttributes[$adCompliantHeader].AttributeType = $resolvedType
+                    $uniqueAttributes[$adCompliantHeader].Description = Get-AttributeDescription -Name $adCompliantHeader -SourceFile $file.Name -Values $values -Type $resolvedType
+                }
+            } else {
+                $uniqueAttributes[$adCompliantHeader] = [PSCustomObject]@{
+                    SourceFile = $file.Name
+                    AttributeName = $adCompliantHeader
+                    AttributeType = $type
+                    Description = Get-AttributeDescription -Name $adCompliantHeader -SourceFile $file.Name -Values $values -Type $type
+                    IsSingleValued = $true
+                }
+                $typeCounts[$type]++
             }
         }
+        Write-Host ""
     }
 
-    if ($uniqueAttributes.Values) {
-        $uniqueAttributes.Values | Export-Csv $OutputFile -NoTypeInformation
-        Write-Host "✅ Analysis complete. Results saved to $OutputFile"
-        Write-Host "📊 Summary:"
-        Write-Host "  🗂️ Total folders processed: $($CsvFolders.Count)"
-        Write-Host "  📄 Total files processed: $totalFiles"
-        Write-Host "  🔢 Total unique attributes: $($uniqueAttributes.Count)"
-        Write-Host "  🔠 Total 'String' attributes: $($typeCounts["String"])"
-        Write-Host "  🔢 Total 'MultiValue' attributes: $($typeCounts["MultiValue"])"
-        Write-Host "  🔢 Total 'Integer' attributes: $($typeCounts["Integer"])"
-        Write-Host "  🔢 Total 'Double' attributes: $($typeCounts["Double"])"
+    # Export results
+    Write-Host "Exporting results..."
+    Write-Host "Type counts:"
+    $typeCounts.GetEnumerator() | ForEach-Object {
+        Write-Host "  $($_.Key): $($_.Value)"
     }
-    else {
-        throw "No results were generated"
+
+    # Create output directory if needed
+    $outputDir = Split-Path -Parent $OutputFile
+    if (-not (Test-Path $outputDir)) {
+        New-Item -ItemType Directory -Path $outputDir -Force | Out-Null
     }
-}
-catch {
-    Write-Error "🚨 Script failed: $_"
+
+    # Export schema
+    $uniqueAttributes.Values | Sort-Object AttributeName | Export-Csv -Path $OutputFile -NoTypeInformation -Encoding UTF8
+
+    # Export conflicts if requested
+    if ($ExportConflicts -and $typeConflicts.Count -gt 0) {
+        $conflicts = $typeConflicts.GetEnumerator() | ForEach-Object {
+            [PSCustomObject]@{
+                AttributeName = $_.Key
+                OriginalType = $_.Value[0]
+                ConflictingType = $_.Value[1]
+                OriginalFile = $_.Value[2]
+                ConflictingFile = $_.Value[3]
+            }
+        }
+        $conflicts | Export-Csv -Path $ConflictOutputFile -NoTypeInformation -Encoding UTF8
+    }
+
+    Write-Host "Schema analysis complete!"
+} catch {
+    Write-Error "Analysis failed: $_"
     exit 1
-} 
+}
