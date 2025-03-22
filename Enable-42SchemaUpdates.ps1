@@ -32,6 +32,8 @@ if (-not $isAdmin) {
     Write-Error "This script must be run with administrative privileges."
     exit 1
 }
+regsvr32 schmmgmt.dll
+
 
 # Registry path for schema updates
 $registryPath = "HKLM:\SYSTEM\CurrentControlSet\Services\NTDS\Parameters"

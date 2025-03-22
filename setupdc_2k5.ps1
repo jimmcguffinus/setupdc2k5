@@ -6,8 +6,8 @@
 
 .DESCRIPTION
     This script allows switching between:
-    - Domain Controller mode (for schema modifications)
-    - Workgroup mode (for testing)
+      - Domain Controller mode (for schema modifications)
+      - Workgroup mode (for testing)
 
     The script preserves the Administrator profile and installed applications
     during transitions to avoid reinstallation requirements.
@@ -25,11 +25,10 @@ if ($PSVersionTable.PSVersion.Major -lt 7) {
 # Set execution policy to bypass for this session.
 Set-ExecutionPolicy Bypass -Scope Process -Force
 
-# Function to check current system state.
 function Get-SystemState {
     $isDomainController = (Get-WmiObject -Class Win32_ComputerSystem).DomainRole -ge 4
     $isWorkgroup        = (Get-WmiObject -Class Win32_ComputerSystem).PartOfDomain -eq $false
-
+    
     if ($isDomainController) {
         return "DomainController"
     }
@@ -41,9 +40,8 @@ function Get-SystemState {
     }
 }
 
-# Function to enable schema modifications.
 function Enable-SchemaModifications {
-    # Enable Schema modifications by setting registry key.
+    # Enable Schema modifications by setting a registry key.
     $regPath = "HKLM:\System\CurrentControlSet\Services\NTDS\Parameters"
     Set-ItemProperty -Path $regPath -Name "Schema Update Allowed" -Value 1 -Type DWord
     
@@ -53,73 +51,53 @@ function Enable-SchemaModifications {
     Write-Output "Schema modifications have been enabled. You can now modify the schema."
 }
 
-# Function to back up Administrator profile data.
 function Backup-AdminProfile {
     Write-Output "Backing up Administrator profile data..."
     $backupPath = "C:\AdminProfileBackup"
-
     if (-not (Test-Path $backupPath)) {
         New-Item -Path $backupPath -ItemType Directory -Force | Out-Null
     }
 
     # Use robocopy instead of Copy-Item for better handling of in-use files.
-    # Exclude problematic directories and use backup mode.
-    $excludeDirs   = @('Application Data','Temporary Internet Files','History','Cache','Temp')
-    $excludeParams = $excludeDirs | ForEach-Object { "/XD `"$($_)`"" }
+    $excludeDirs   = @('Application Data', 'Temporary Internet Files', 'History', 'Cache', 'Temp')
+    $excludeParams = $excludeDirs | ForEach-Object { "/XD `"$_`"" }
 
-    # Backup AppData\Local excluding problematic folders.
+    # Backup AppData\Local, excluding problematic folders.
     $cmd = "robocopy `"C:\Users\Administrator\AppData\Local`" `"$backupPath\Local`" /E /ZB /R:1 /W:1 /XJ $excludeParams"
     Invoke-Expression $cmd
-
-    # Backup AppData\Roaming excluding problematic folders.
+    
+    # Backup AppData\Roaming, excluding problematic folders.
     $cmd = "robocopy `"C:\Users\Administrator\AppData\Roaming`" `"$backupPath\Roaming`" /E /ZB /R:1 /W:1 /XJ $excludeParams"
     Invoke-Expression $cmd
-
+    
     # Backup Desktop.
     $cmd = "robocopy `"C:\Users\Administrator\Desktop`" `"$backupPath\Desktop`" /E /ZB /R:1 /W:1 /XJ"
     Invoke-Expression $cmd
-
+    
     Write-Output "Profile backup completed with robocopy."
 }
 
-# Function to restore Administrator profile data.
-function Restore-AdminProfile {
-    if (Test-Path "C:\AdminProfileBackup") {
-        Write-Output "Restoring Administrator profile..."
-
-        # Use robocopy for restoration.
-        $excludeDirs   = @('Application Data','Temporary Internet Files','History','Cache','Temp')
-        $excludeParams = $excludeDirs | ForEach-Object { "/XD `"$($_)`"" }
-
-        # Restore Local AppData.
-        $cmd = "robocopy `"C:\AdminProfileBackup\Local`" `"C:\Users\Administrator\AppData\Local`" /E /ZB /R:1 /W:1 /XJ $excludeParams"
-        Invoke-Expression $cmd
-
-        # Restore Roaming AppData.
-        $cmd = "robocopy `"C:\AdminProfileBackup\Roaming`" `"C:\Users\Administrator\AppData\Roaming`" /E /ZB /R:1 /W:1 /XJ $excludeParams"
-        Invoke-Expression $cmd
-
-        # Restore Desktop.
-        $cmd = "robocopy `"C:\AdminProfileBackup\Desktop`" `"C:\Users\Administrator\Desktop`" /E /ZB /R:1 /W:1 /XJ"
-        Invoke-Expression $cmd
-
-        Write-Output "Profile restoration completed."
-    }
-}
-
-# Function to convert to domain controller.
 function Convert-ToDomainController {
-    # Prompt the user to enter the domain name (FQDN).
-    $domainName = Read-Host "Enter the fully qualified domain name (FQDN)"
-
-    # If ADDS role isn't installed, install it.
+    # Prompt for domain name (FQDN).
+    $domainName = Read-Host "Enter the fully qualified domain name (e.g. domain.local)"
+    
+    # Validate FQDN format.
+    if (-not ($domainName -match "^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)+$")) {
+        Write-Error "Invalid FQDN format. Please use a format like 'domain.local'"
+        return
+    }
+    
+    # Prompt for Safe Mode Administrator password.
+    $safeModePassword = Read-Host "Enter Safe Mode Administrator password" -AsSecureString
+    
+    # If AD DS role isn't installed, install it.
     if (-not (Get-WindowsFeature -Name AD-Domain-Services).Installed) {
         Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
     }
-
-    # Back up profile data we want to preserve.
+    
+    # Back up profile data to preserve it.
     Backup-AdminProfile
-
+    
     # Check if we're creating a new domain or promoting to an existing one.
     $existingDomain = $null
     try {
@@ -128,139 +106,58 @@ function Convert-ToDomainController {
     catch {
         # Domain doesn't exist yet.
     }
-
-    # Create the startup script for restoration after reboot.
-    $startupScript = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\RestoreProfile.ps1"
-
-    $restoreScript = @"
-# Wait for system to fully initialize
-Start-Sleep -Seconds 60
-
-# Set execution policy
-Set-ExecutionPolicy Bypass -Scope Process -Force
-
-# Restore Administrator profile function
-function Restore-AdminProfile {
-    if (Test-Path "C:\AdminProfileBackup") {
-        Write-Output "Restoring Administrator profile..."
-
-        # Use robocopy for restoration
-        `$excludeDirs   = @('Application Data','Temporary Internet Files','History','Cache','Temp')
-        `$excludeParams = `$excludeDirs | ForEach-Object { "/XD `"`$_`"" }
-
-        # Restore Local AppData
-        `$cmd = "robocopy `"C:\AdminProfileBackup\Local`" `"C:\Users\Administrator\AppData\Local`" /E /ZB /R:1 /W:1 /XJ `$excludeParams"
-        Invoke-Expression `$cmd
-
-        # Restore Roaming AppData
-        `$cmd = "robocopy `"C:\AdminProfileBackup\Roaming`" `"C:\Users\Administrator\AppData\Roaming`" /E /ZB /R:1 /W:1 /XJ `$excludeParams"
-        Invoke-Expression `$cmd
-
-        # Restore Desktop
-        `$cmd = "robocopy `"C:\AdminProfileBackup\Desktop`" `"C:\Users\Administrator\Desktop`" /E /ZB /R:1 /W:1 /XJ"
-        Invoke-Expression `$cmd
-
-        Write-Output "Profile restoration completed."
-    }
-}
-
-# Run restoration
-Restore-AdminProfile
-
-# Enable schema modifications automatically
-`$regPath = "HKLM:\System\CurrentControlSet\Services\NTDS\Parameters"
-if (Test-Path `$regPath) {
-    Set-ItemProperty -Path `$regPath -Name "Schema Update Allowed" -Value 1 -Type DWord
-    Restart-Service NTDS -ErrorAction SilentlyContinue
-}
-
-# Remove this script
-Remove-Item -Path "$startupScript" -Force
-"@
-
-    # Create the startup script.
-    Set-Content -Path $startupScript -Value $restoreScript
-
+    
     if ($null -eq $existingDomain) {
-        # Create a new forest and domain.
         Write-Output "Creating new forest and domain: $domainName"
-        Install-ADDSForest -DomainName $domainName -InstallDNS -Force -SafeModeAdministratorPassword (ConvertTo-SecureString "P@ssw0rd1" -AsPlainText -Force)
+        Install-ADDSForest `
+            -DomainName $domainName `
+            -InstallDNS `
+            -Force `
+            -SafeModeAdministratorPassword $safeModePassword `
+            -NoRebootOnCompletion
     }
     else {
-        # Promote to an existing domain.
         Write-Output "Promoting to existing domain: $domainName"
-        Install-ADDSDomainController -DomainName $domainName -InstallDNS -Force -SafeModeAdministratorPassword (ConvertTo-SecureString "P@ssw0rd1" -AsPlainText -Force)
+        Install-ADDSDomainController `
+            -DomainName $domainName `
+            -InstallDNS `
+            -Force `
+            -SafeModeAdministratorPassword $safeModePassword `
+            -NoRebootOnCompletion
     }
-
+    
     Write-Output "System will reboot and continue setup..."
     Start-Sleep -Seconds 5
     Restart-Computer -Force
 }
 
-# Function to convert to workgroup.
 function Convert-ToWorkgroup {
-    $workgroupName = "SCHEMATEST"
-
-    # Back up profile data.
-    Backup-AdminProfile
-
-    # Create restore script for after reboot.
-    $startupScript  = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\RestoreProfile.ps1"
-    $restoreScript = @"
-# Wait for system to fully initialize
-Start-Sleep -Seconds 30
-
-# Set execution policy
-Set-ExecutionPolicy Bypass -Scope Process -Force
-
-# Restore Administrator profile function
-function Restore-AdminProfile {
-    if (Test-Path "C:\AdminProfileBackup") {
-        Write-Output "Restoring Administrator profile..."
-
-        # Use robocopy for restoration
-        `$excludeDirs   = @('Application Data','Temporary Internet Files','History','Cache','Temp')
-        `$excludeParams = `$excludeDirs | ForEach-Object { "/XD `"`$_`"" }
-
-        # Restore Local AppData
-        `$cmd = "robocopy `"C:\AdminProfileBackup\Local`" `"C:\Users\Administrator\AppData\Local`" /E /ZB /R:1 /W:1 /XJ `$excludeParams"
-        Invoke-Expression `$cmd
-
-        # Restore Roaming AppData
-        `$cmd = "robocopy `"C:\AdminProfileBackup\Roaming`" `"C:\Users\Administrator\AppData\Roaming`" /E /ZB /R:1 /W:1 /XJ `$excludeParams"
-        Invoke-Expression `$cmd
-
-        # Restore Desktop
-        `$cmd = "robocopy `"C:\AdminProfileBackup\Desktop`" `"C:\Users\Administrator\Desktop`" /E /ZB /R:1 /W:1 /XJ"
-        Invoke-Expression `$cmd
-
-        Write-Output "Profile restoration completed."
-    }
-}
-
-# Run restoration
-Restore-AdminProfile
-
-# Join workgroup
-Add-Computer -WorkgroupName "$workgroupName" -Force
-
-# Remove this script
-Remove-Item -Path "$startupScript" -Force
-
-# Schedule a reboot to complete workgroup joining
-Restart-Computer -Force
-"@
-
-    # Create the startup script.
-    Set-Content -Path $startupScript -Value $restoreScript
-
-    # Remove domain controller role.
+    
+    # Prompt for local administrator password.
+    $securePassword  = Read-Host "Enter local administrator password" -AsSecureString
+    
     Write-Output "Removing domain controller role..."
-    Uninstall-ADDSDomainController -LocalAdministratorPassword (ConvertTo-SecureString "P@ssw0rd1" -AsPlainText -Force) -Force
-
-    Write-Output "System will reboot and continue setup..."
-    Start-Sleep -Seconds 5
-    Restart-Computer -Force
+    
+    try {
+        Write-Output "Attempting DC demotion - system will reboot after this..."
+        Start-Sleep -Seconds 2
+        
+        Uninstall-ADDSDomainController `
+            -LocalAdministratorPassword $securePassword `
+            -DemoteOperationMasterRole:$true `
+            -RemoveApplicationPartitions:$true `
+            -RemoveDnsDelegation:$true `
+            -LastDomainControllerInDomain:$true `
+            -IgnoreLastDnsServerForZone:$true `
+            -Force:$true
+        
+        Restart-Computer -Force
+    }
+    catch {
+        Write-Output "Demotion attempt encountered an error - forcing reboot..."
+        Start-Sleep -Seconds 2
+        Restart-Computer -Force
+    }
 }
 
 # Main execution logic.

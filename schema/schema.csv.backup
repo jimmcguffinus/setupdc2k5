@@ -1,180 +1,166 @@
-AttributeName,Description,AttributeType,IsSingleValued
-playerID,Unique identifier for a player,String,TRUE
-teamID,Unique identifier for a team,String,TRUE
-yearID,Year of the record,Integer,TRUE
-lgID,League identifier,String,TRUE
-nameFirst,Player's first name,String,TRUE
-nameLast,Player's last name,String,TRUE
-nameGiven,Player's given name,String,TRUE
-birthYear,Player's birth year,Integer,TRUE
-birthMonth,Player's birth month,Integer,TRUE
-birthDay,Player's birth day,Integer,TRUE
-birthCountry,Player's birth country,String,TRUE
-birthState,Player's birth state,String,TRUE
-birthCity,Player's birth city,String,TRUE
-deathYear,Player's death year,Integer,TRUE
-deathMonth,Player's death month,Integer,TRUE
-deathDay,Player's death day,Integer,TRUE
-deathCountry,Player's death country,String,TRUE
-deathState,Player's death state,String,TRUE
-deathCity,Player's death city,String,TRUE
-weight,Player's weight in pounds,Integer,TRUE
-height,Player's height in inches,Integer,TRUE
-bats,Player's batting hand (L/R/S),String,TRUE
-throws,Player's throwing hand (L/R),String,TRUE
-debut,Date of MLB debut,String,TRUE
-finalGame,Date of final MLB game,String,TRUE
-retroID,Retrosheet ID,String,true
-bbrefID,Baseball Reference ID,String,true
-G,Games played,Integer,false
-AB,At bats,Integer,false
-R,Runs scored,Integer,false
-H,Hits,Integer,false
-2B,Doubles,Integer,false
-3B,Triples,Integer,false
-HR,Home runs,Integer,false
-RBI,Runs batted in,Integer,false
-SB,Stolen bases,Integer,false
-CS,Caught stealing,Integer,false
-BB,Base on balls,Integer,false
-SO,Strikeouts,Integer,false
-IBB,Intentional walks,Integer,false
-HBP,Hit by pitch,Integer,false
-SH,Sacrifice hits,Integer,false
-SF,Sacrifice flies,Integer,false
-GIDP,Grounded into double plays,Integer,false
-W,Wins,Integer,false
-L,Losses,Integer,false
-ERA,Earned run average,Integer,false
-G_p,Games pitched,Integer,false
-GS,Games started,Integer,false
-CG,Complete games,Integer,false
-SHO,Shutouts,Integer,false
-SV,Saves,Integer,false
-IPouts,Outs pitched,Integer,false
-H_p,Hits allowed,Integer,false
-ER,Earned runs allowed,Integer,false
-HR_p,Home runs allowed,Integer,false
-BB_p,Walks allowed,Integer,false
-SO_p,Strikeouts by pitcher,Integer,false
-BAOpp,Opponents' batting average,Integer,false
-WP,Wild pitches,Integer,false
-HBP_p,Batters hit by pitch,Integer,false
-BK,Balks,Integer,false
-BFP,Batters faced by pitcher,Integer,false
-GF,Games finished,Integer,false
-R_p,Runs allowed,Integer,false
-teamName,Full name of team,String,true
-franchID,Franchise identifier,String,true
-divID,Division identifier,String,true
-div_rank,Rank in division,Integer,true
-DivWin,Division winner flag,String,true
-WCWin,Wild card winner flag,String,true
-LgWin,League winner flag,String,true
-WSWin,World Series winner flag,String,true
-attendance,Home attendance total,Integer,true
-park_name,Name of ballpark,String,true
-park_alias,Alternative names for ballpark,String,false
-city,City where ballpark is located,String,true
-state,State where ballpark is located,String,true
-country,Country where ballpark is located,String,true
-capacity,Seating capacity,Integer,true
-opened,Year ballpark opened,Integer,true
-closed,Year ballpark closed,Integer,true
-surface,Playing surface type,String,true
-roof_type,Type of stadium roof,String,true
-dimensions_lf,Left field distance,Integer,true
-dimensions_cf,Center field distance,Integer,true
-dimensions_rf,Right field distance,Integer,true
-elevation,Stadium elevation in feet,Integer,true
-league_name,Full name of league,String,true
-league_level,Level of league (MLB/AAA/AA/etc),String,true
-division_name,Full name of division,String,true
-manager_id,Unique identifier for manager,String,true
-manager_first,Manager's first name,String,true
-manager_last,Manager's last name,String,true
-coach_type,Type of coach (hitting/pitching/etc),String,true
-coach_id,Unique identifier for coach,String,true
-coach_first,Coach's first name,String,true
-coach_last,Coach's last name,String,true
-salary,Player's salary,Integer,true
-contract_start,Contract start date,String,true
-contract_end,Contract end date,String,true
-position,Primary playing position,String,true
-position_detail,Detailed position information,String,true
-roster_status,Current roster status,String,true
-transaction_type,Type of transaction,String,true
-transaction_date,Date of transaction,String,true
-from_team,Team trading/releasing player,String,true
-to_team,Team acquiring player,String,true
-draft_year,Year player was drafted,Integer,true
-draft_round,Draft round number,Integer,true
-draft_pick,Overall draft pick number,Integer,true
-school_name,Name of player's school,String,true
-school_type,Type of school (HS/College),String,true
-injury_type,Type of injury,String,true
-injury_date,Date of injury,String,true
-dl_type,Type of disabled list,String,true
-dl_start,Start date of DL stint,String,true
-dl_end,End date of DL stint,String,true
-award_name,Name of award,String,true
-award_year,Year award was given,Integer,true
-award_rank,Rank/place in award voting,Integer,true
-allstar_year,Year of All-Star selection,Integer,true
-allstar_game,All-Star game number,Integer,true
-allstar_starter,Whether player was starter,String,true
-gold_glove_year,Year of Gold Glove award,Integer,true
-gold_glove_pos,Position for Gold Glove,String,true
-silver_slugger_year,Year of Silver Slugger,Integer,true
-silver_slugger_pos,Position for Silver Slugger,String,true
-hof_year,Year of Hall of Fame induction,Integer,true
-hof_votes,Number of HOF votes received,Integer,true
-hof_inducted,Whether player was inducted,String,true
-jersey_number,Player's jersey number,String,true
-jersey_retired,Whether number is retired,String,true
-retired_team,Team that retired number,String,true
-retired_date,Date number was retired,String,true
-stat_type,Type of statistic,String,true
-stat_value,Value of statistic,Integer,false
-stat_date,Date statistic was recorded,String,true
-game_id,Unique identifier for game,String,true
-game_date,Date of game,String,true
-game_type,Type of game (regular/playoff),String,true
-game_number,Game number (for doubleheaders),Integer,true
-home_team,Home team identifier,String,true
-away_team,Away team identifier,String,true
-start_time,Game start time,String,true
-end_time,Game end time,String,true
-attendance_game,Attendance for specific game,Integer,true
-weather,Weather conditions,String,true
-wind_speed,Wind speed in mph,Integer,true
-wind_direction,Wind direction,String,true
-temperature,Temperature in Fahrenheit,Integer,true
-field_condition,Playing field condition,String,true
-sky_condition,Sky conditions,String,true
-precipitation,Type of precipitation,String,true
-delay_reason,Reason for delay,String,true
-delay_minutes,Length of delay in minutes,Integer,true
-umpire_id,Unique identifier for umpire,String,true
-umpire_first,Umpire's first name,String,true
-umpire_last,Umpire's last name,String,true
-umpire_position,Umpire's position,String,true
-official_scorer,Name of official scorer,String,true
-translator,Name of translator if used,String,true
-broadcast_tv,TV broadcast network,String,true
-broadcast_radio,Radio broadcast network,String,true
-broadcast_language,Broadcast language,String,true
-promotion_name,Name of promotion,String,true
-promotion_type,Type of promotion,String,true
-promotion_item,Item being given away,String,true
-promotion_quantity,Quantity of items,Integer,true
-milestone_type,Type of milestone,String,true
-milestone_value,Value of milestone,Integer,true
-milestone_date,Date milestone achieved,String,true
-milestone_opponent,Opponent for milestone,String,true
-milestone_location,Location of milestone,String,true
-record_type,Type of record,String,true
-record_value,Value of record,Integer,true
-record_date,Date record was set,String,true
-record_broken,Date record was broken,String,true
-record_holder,Previous record holder,String,true
+"SourceFile","AttributeName","AttributeType","Description","IsSingleValued"
+"Fielding.csv","A","Integer","Found in Fielding.csv. 582 unique values out of 149365 total values (0 null/empty)","True"
+"Batting.csv","AB","Integer","Found in Batting.csv. 699 unique values out of 112184 total values (0 null/empty)","True"
+"TeamsFranchises.csv","active","String","Found in TeamsFranchises.csv. 3 unique values out of 120 total values (0 null/empty)","True"
+"Hardcoded","appearances","MultiValue","Hardcoded MultiValue attribute","False"
+"HomeGames.csv","attendance","Integer","Found in HomeGames.csv. 2930 unique values out of 3200 total values (0 null/empty)","True"
+"schema_analysis.csv","AttributeName","String","Found in schema_analysis.csv. 149 unique values out of 327 total values (0 null/empty)","True"
+"schema_analysis.csv","AttributeType","String","Found in schema_analysis.csv. 2 unique values out of 327 total values (0 null/empty)","True"
+"schema_analysis.csv","AuxClass","String","Found in schema_analysis.csv. 1 unique values out of 327 total values (0 null/empty)","True"
+"AwardsManagers.csv","awardID","String","Found in AwardsManagers.csv. 2 unique values out of 179 total values (0 null/empty)","True"
+"HallOfFame.csv","ballots","String","Found in HallOfFame.csv. 77 unique values out of 4323 total values (197 null/empty)","True"
+"Pitching.csv","BAOpp","String","Found in Pitching.csv. 504 unique values out of 50402 total values (4444 null/empty)","True"
+"People.csv","bats","String","Found in People.csv. 3 unique values out of 20936 total values (1175 null/empty)","True"
+"Hardcoded","batting","MultiValue","Hardcoded MultiValue attribute","False"
+"Batting.csv","BB","Integer","Found in Batting.csv. 156 unique values out of 112184 total values (0 null/empty)","True"
+"Teams.csv","BBA","Integer","Found in Teams.csv. 577 unique values out of 3015 total values (0 null/empty)","True"
+"People.csv","bbrefID","String","Found in People.csv. 20925 unique values out of 20936 total values (11 null/empty)","True"
+"Pitching.csv","BFP","Integer","Found in Pitching.csv. 1736 unique values out of 50402 total values (3 null/empty)","True"
+"People.csv","birthCity","String","Found in People.csv. 5021 unique values out of 20936 total values (167 null/empty)","True"
+"People.csv","birthCountry","String","Found in People.csv. 58 unique values out of 20936 total values (59 null/empty)","True"
+"People.csv","birthDay","Integer","Found in People.csv. 31 unique values out of 20936 total values (415 null/empty)","True"
+"People.csv","birthMonth","Integer","Found in People.csv. 12 unique values out of 20936 total values (273 null/empty)","True"
+"People.csv","birthState","String","Found in People.csv. 316 unique values out of 20936 total values (529 null/empty)","True"
+"People.csv","birthYear","Integer","Found in People.csv. 172 unique values out of 20936 total values (106 null/empty)","True"
+"Pitching.csv","BK","Integer","Found in Pitching.csv. 16 unique values out of 50402 total values (0 null/empty)","True"
+"Teams.csv","BPF","Integer","Found in Teams.csv. 44 unique values out of 3015 total values (0 null/empty)","True"
+"HallOfFame.csv","category","String","Found in HallOfFame.csv. 4 unique values out of 4323 total values (0 null/empty)","True"
+"Pitching.csv","CG","Integer","Found in Pitching.csv. 74 unique values out of 50402 total values (0 null/empty)","True"
+"Parks.csv","city","String","Found in Parks.csv. 87 unique values out of 255 total values (0 null/empty)","True"
+"Parks.csv","country","String","Found in Parks.csv. 7 unique values out of 255 total values (0 null/empty)","True"
+"Batting.csv","CS","String","Found in Teams.csv. 138 unique values out of 3015 total values (831 null/empty)","True"
+"People.csv","deathCity","String","Found in People.csv. 2758 unique values out of 20936 total values (10749 null/empty)","True"
+"People.csv","deathCountry","String","Found in People.csv. 26 unique values out of 20936 total values (10744 null/empty)","True"
+"People.csv","deathDay","Integer","Found in People.csv. 31 unique values out of 20936 total values (10742 null/empty)","True"
+"People.csv","deathMonth","Integer","Found in People.csv. 12 unique values out of 20936 total values (10741 null/empty)","True"
+"People.csv","deathState","String","Found in People.csv. 112 unique values out of 20936 total values (10801 null/empty)","True"
+"People.csv","deathYear","Integer","Found in People.csv. 152 unique values out of 20936 total values (10740 null/empty)","True"
+"People.csv","debut","String","Found in People.csv. 10971 unique values out of 20936 total values (213 null/empty)","True"
+"Teams.csv","divID","String","Found in Teams.csv. 3 unique values out of 3015 total values (1517 null/empty)","True"
+"Teams.csv","DivWin","String","Found in Teams.csv. 2 unique values out of 3015 total values (1545 null/empty)","True"
+"Fielding.csv","DP","Integer","Found in Fielding.csv. 170 unique values out of 149365 total values (0 null/empty)","True"
+"Fielding.csv","E","Integer","Found in Fielding.csv. 107 unique values out of 149365 total values (1 null/empty)","True"
+"Pitching.csv","ER","Integer","Found in Pitching.csv. 216 unique values out of 50402 total values (0 null/empty)","True"
+"Pitching.csv","ERA","String","Found in Pitching.csv. 1304 unique values out of 50402 total values (97 null/empty)","True"
+"Hardcoded","fielding","MultiValue","Hardcoded MultiValue attribute","False"
+"People.csv","finalGame","String","Found in People.csv. 9853 unique values out of 20936 total values (213 null/empty)","True"
+"Teams.csv","FP","String","Found in Teams.csv. 166 unique values out of 3015 total values (0 null/empty)","True"
+"Teams.csv","franchID","String","Found in Teams.csv. 120 unique values out of 3015 total values (0 null/empty)","True"
+"TeamsFranchises.csv","franchName","String","Found in TeamsFranchises.csv. 99 unique values out of 120 total values (0 null/empty)","True"
+"Batting.csv","G","Integer","Found in Batting.csv. 165 unique values out of 112184 total values (0 null/empty)","True"
+"Appearances.csv","G-1b","Integer","Found in Appearances.csv. 163 unique values out of 112106 total values (0 null/empty)","True"
+"Appearances.csv","G-2b","Integer","Found in Appearances.csv. 164 unique values out of 112106 total values (0 null/empty)","True"
+"Appearances.csv","G-3b","Integer","Found in Appearances.csv. 165 unique values out of 112106 total values (0 null/empty)","True"
+"Appearances.csv","G-all","Integer","Found in Appearances.csv. 165 unique values out of 112106 total values (0 null/empty)","True"
+"Appearances.csv","G-batting","Integer","Found in Appearances.csv. 166 unique values out of 112106 total values (0 null/empty)","True"
+"Appearances.csv","G-c","Integer","Found in Appearances.csv. 157 unique values out of 112106 total values (0 null/empty)","True"
+"Appearances.csv","G-cf","Integer","Found in Appearances.csv. 163 unique values out of 112106 total values (0 null/empty)","True"
+"Appearances.csv","G-defense","Integer","Found in Appearances.csv. 166 unique values out of 112106 total values (7698 null/empty)","True"
+"Appearances.csv","G-dh","Integer","Found in Appearances.csv. 158 unique values out of 112106 total values (1264 null/empty)","True"
+"Appearances.csv","G-lf","Integer","Found in Appearances.csv. 164 unique values out of 112106 total values (0 null/empty)","True"
+"Appearances.csv","G-of","Integer","Found in Appearances.csv. 165 unique values out of 112106 total values (0 null/empty)","True"
+"Appearances.csv","G-p","Integer","Found in Appearances.csv. 95 unique values out of 112106 total values (0 null/empty)","True"
+"Appearances.csv","G-ph","Integer","Found in Appearances.csv. 94 unique values out of 112106 total values (8962 null/empty)","True"
+"Appearances.csv","G-pr","Integer","Found in Appearances.csv. 50 unique values out of 112106 total values (8962 null/empty)","True"
+"Appearances.csv","G-rf","Integer","Found in Appearances.csv. 163 unique values out of 112106 total values (0 null/empty)","True"
+"Appearances.csv","G-ss","Integer","Found in Appearances.csv. 166 unique values out of 112106 total values (0 null/empty)","True"
+"AllstarFull.csv","gameID","String","Found in AllstarFull.csv. 92 unique values out of 5516 total values (49 null/empty)","True"
+"AllstarFull.csv","gameNum","Integer","Found in AllstarFull.csv. 3 unique values out of 5516 total values (0 null/empty)","True"
+"HomeGames.csv","games","Integer","Found in HomeGames.csv. 88 unique values out of 3200 total values (0 null/empty)","True"
+"FieldingOF.csv","Gcf","Integer","Found in FieldingOF.csv. 159 unique values out of 12028 total values (37 null/empty)","True"
+"Pitching.csv","GF","Integer","Found in Pitching.csv. 78 unique values out of 50402 total values (0 null/empty)","True"
+"Teams.csv","Ghome","Integer","Found in Teams.csv. 47 unique values out of 3015 total values (399 null/empty)","True"
+"Batting.csv","GIDP","Integer","Found in Batting.csv. 35 unique values out of 112184 total values (25442 null/empty)","True"
+"FieldingOF.csv","Glf","Integer","Found in FieldingOF.csv. 157 unique values out of 12028 total values (37 null/empty)","True"
+"AllstarFull.csv","GP","Integer","Found in AllstarFull.csv. 2 unique values out of 5516 total values (0 null/empty)","True"
+"FieldingOF.csv","Grf","Integer","Found in FieldingOF.csv. 159 unique values out of 12028 total values (43 null/empty)","True"
+"Appearances.csv","GS","Integer","Found in Appearances.csv. 165 unique values out of 112106 total values (8962 null/empty)","True"
+"Batting.csv","H","Integer","Found in Batting.csv. 250 unique values out of 112184 total values (0 null/empty)","True"
+"Teams.csv","HA","Integer","Found in Teams.csv. 772 unique values out of 3015 total values (0 null/empty)","True"
+"ManagersHalf.csv","half","Integer","Found in ManagersHalf.csv. 2 unique values out of 93 total values (0 null/empty)","True"
+"Batting.csv","HBP","Integer","Found in Batting.csv. 41 unique values out of 112184 total values (2816 null/empty)","True"
+"People.csv","height","Integer","Found in People.csv. 23 unique values out of 20936 total values (730 null/empty)","True"
+"Batting.csv","HR","Integer","Found in Batting.csv. 68 unique values out of 112184 total values (0 null/empty)","True"
+"Teams.csv","HRA","Integer","Found in Teams.csv. 248 unique values out of 3015 total values (0 null/empty)","True"
+"Batting.csv","IBB","Integer","Found in Batting.csv. 45 unique values out of 112184 total values (36651 null/empty)","True"
+"HallOfFame.csv","inducted","String","Found in HallOfFame.csv. 2 unique values out of 4323 total values (0 null/empty)","True"
+"Fielding.csv","InnOuts","Integer","Found in Fielding.csv. 4339 unique values out of 149365 total values (29932 null/empty)","True"
+"Managers.csv","inseason","Integer","Found in Managers.csv. 9 unique values out of 3718 total values (0 null/empty)","True"
+"Pitching.csv","IPouts","Integer","Found in Pitching.csv. 1311 unique values out of 50402 total values (0 null/empty)","True"
+"Managers.csv","L","Integer","Found in Managers.csv. 119 unique values out of 3718 total values (0 null/empty)","True"
+"HomeGames.csv","league-key","String","Found in HomeGames.csv. 7 unique values out of 3200 total values (0 null/empty)","True"
+"AllstarFull.csv","lgID","String","Found in AllstarFull.csv. 2 unique values out of 5516 total values (0 null/empty)","True"
+"SeriesPost.csv","lgIDloser","String","Found in SeriesPost.csv. 3 unique values out of 378 total values (0 null/empty)","True"
+"SeriesPost.csv","lgIDwinner","String","Found in SeriesPost.csv. 3 unique values out of 378 total values (0 null/empty)","True"
+"Teams.csv","LgWin","String","Found in Teams.csv. 2 unique values out of 3015 total values (28 null/empty)","True"
+"SeriesPost.csv","losses","Integer","Found in SeriesPost.csv. 6 unique values out of 378 total values (0 null/empty)","True"
+"TeamsFranchises.csv","NAassoc","String","Found in TeamsFranchises.csv. 12 unique values out of 120 total values (108 null/empty)","True"
+"Teams.csv","name","String","Found in Teams.csv. 140 unique values out of 3015 total values (0 null/empty)","True"
+"Schools.csv","name-full","String","Found in Schools.csv. 1199 unique values out of 1207 total values (0 null/empty)","True"
+"People.csv","nameFirst","String","Found in People.csv. 2657 unique values out of 20936 total values (36 null/empty)","True"
+"People.csv","nameGiven","String","Found in People.csv. 13928 unique values out of 20936 total values (36 null/empty)","True"
+"People.csv","nameLast","String","Found in People.csv. 10540 unique values out of 20936 total values (0 null/empty)","True"
+"HallOfFame.csv","needed","String","Found in HallOfFame.csv. 68 unique values out of 4323 total values (354 null/empty)","True"
+"HallOfFame.csv","needed-note","String","Found in HallOfFame.csv. 2 unique values out of 4323 total values (4166 null/empty)","True"
+"AwardsManagers.csv","notes","String","No values found in AwardsManagers.csv","True"
+"HomeGames.csv","openings","Integer","Found in HomeGames.csv. 87 unique values out of 3200 total values (0 null/empty)","True"
+"Teams.csv","park","String","Found in Teams.csv. 219 unique values out of 3015 total values (34 null/empty)","True"
+"Parks.csv","park-alias","String","Found in Parks.csv. 57 unique values out of 255 total values (196 null/empty)","True"
+"HomeGames.csv","park-key","String","Found in HomeGames.csv. 258 unique values out of 3200 total values (0 null/empty)","True"
+"Parks.csv","park-name","String","Found in Parks.csv. 243 unique values out of 255 total values (0 null/empty)","True"
+"Fielding.csv","PB","String","Found in FieldingPost.csv. 5 unique values out of 15540 total values (14338 null/empty)","True"
+"Hardcoded","pitching","MultiValue","Hardcoded MultiValue attribute","False"
+"AllstarFull.csv","playerID","String","Found in AllstarFull.csv. 1939 unique values out of 5516 total values (0 null/empty)","True"
+"Managers.csv","plyrMgr","String","Found in Managers.csv. 2 unique values out of 3718 total values (0 null/empty)","True"
+"Fielding.csv","PO","Integer","Found in Fielding.csv. 1558 unique values out of 149365 total values (0 null/empty)","True"
+"AwardsShareManagers.csv","pointsMax","Integer","Found in AwardsShareManagers.csv. 6 unique values out of 425 total values (11 null/empty)","True"
+"AwardsShareManagers.csv","pointsWon","String","Found in AwardsSharePlayers.csv. 349 unique values out of 6879 total values (0 null/empty)","True"
+"Fielding.csv","POS","String","Found in Fielding.csv. 7 unique values out of 149365 total values (0 null/empty)","True"
+"Teams.csv","PPF","Integer","Found in Teams.csv. 42 unique values out of 3015 total values (0 null/empty)","True"
+"Batting.csv","R","Integer","Found in Batting.csv. 167 unique values out of 112184 total values (0 null/empty)","True"
+"Teams.csv","RA","Integer","Found in Teams.csv. 625 unique values out of 3015 total values (0 null/empty)","True"
+"Managers.csv","rank","Integer","Found in Managers.csv. 1 unique values out of 1 total values (0 null/empty)","True"
+"Batting.csv","RBI","Integer","Found in Batting.csv. 175 unique values out of 112184 total values (756 null/empty)","True"
+"People.csv","retroID","String","Found in People.csv. 20891 unique values out of 20936 total values (45 null/empty)","True"
+"BattingPost.csv","round","String","Found in BattingPost.csv. 22 unique values out of 16374 total values (0 null/empty)","True"
+"Salaries.csv","salary","Integer","Found in Salaries.csv. 3393 unique values out of 26428 total values (0 null/empty)","True"
+"schema_analysis.csv","SampleValue","String","Found in schema_analysis.csv. 137 unique values out of 327 total values (7 null/empty)","True"
+"Batting.csv","SB","String","Found in Teams.csv. 325 unique values out of 3015 total values (125 null/empty)","True"
+"CollegePlaying.csv","schoolID","String","Found in CollegePlaying.csv. 1038 unique values out of 17350 total values (0 null/empty)","True"
+"Batting.csv","SF","Integer","Found in Batting.csv. 20 unique values out of 112184 total values (36104 null/empty)","True"
+"Batting.csv","SH","Integer","Found in Batting.csv. 54 unique values out of 112184 total values (6068 null/empty)","True"
+"Pitching.csv","SHO","Integer","Found in Pitching.csv. 15 unique values out of 50402 total values (0 null/empty)","True"
+"Batting.csv","SO","Integer","Found in Batting.csv. 211 unique values out of 112184 total values (2100 null/empty)","True"
+"Teams.csv","SOA","Integer","Found in Teams.csv. 1157 unique values out of 3015 total values (0 null/empty)","True"
+"schema_analysis.csv","SourceFile","String","Found in schema_analysis.csv. 20 unique values out of 327 total values (0 null/empty)","True"
+"HomeGames.csv","span-first","String","Found in HomeGames.csv. 1123 unique values out of 3200 total values (0 null/empty)","True"
+"HomeGames.csv","span-last","String","Found in HomeGames.csv. 1153 unique values out of 3200 total values (0 null/empty)","True"
+"AllstarFull.csv","startingPos","Integer","Found in AllstarFull.csv. 10 unique values out of 5516 total values (3785 null/empty)","True"
+"Parks.csv","state","String","Found in Parks.csv. 37 unique values out of 255 total values (1 null/empty)","True"
+"Batting.csv","stint","Integer","Found in Batting.csv. 5 unique values out of 112184 total values (0 null/empty)","True"
+"Pitching.csv","SV","Integer","Found in Pitching.csv. 57 unique values out of 50402 total values (0 null/empty)","True"
+"HomeGames.csv","team-key","String","Found in HomeGames.csv. 148 unique values out of 3200 total values (0 null/empty)","True"
+"AllstarFull.csv","teamID","String","Found in AllstarFull.csv. 43 unique values out of 5516 total values (0 null/empty)","True"
+"Teams.csv","teamIDBR","String","Found in Teams.csv. 101 unique values out of 3015 total values (0 null/empty)","True"
+"Teams.csv","teamIDlahman45","String","Found in Teams.csv. 148 unique values out of 3015 total values (0 null/empty)","True"
+"SeriesPost.csv","teamIDloser","String","Found in SeriesPost.csv. 46 unique values out of 378 total values (0 null/empty)","True"
+"Teams.csv","teamIDretro","String","Found in Teams.csv. 151 unique values out of 3015 total values (0 null/empty)","True"
+"SeriesPost.csv","teamIDwinner","String","Found in SeriesPost.csv. 43 unique values out of 378 total values (0 null/empty)","True"
+"People.csv","throws","String","Found in People.csv. 3 unique values out of 20936 total values (973 null/empty)","True"
+"AwardsManagers.csv","tie","String","Found in AwardsManagers.csv. 1 unique values out of 179 total values (177 null/empty)","True"
+"SeriesPost.csv","ties","Integer","Found in SeriesPost.csv. 2 unique values out of 378 total values (0 null/empty)","True"
+"FieldingPost.csv","TP","Integer","Found in FieldingPost.csv. 2 unique values out of 15540 total values (0 null/empty)","True"
+"HallOfFame.csv","votedBy","String","Found in HallOfFame.csv. 9 unique values out of 4323 total values (0 null/empty)","True"
+"HallOfFame.csv","votes","String","Found in HallOfFame.csv. 373 unique values out of 4323 total values (197 null/empty)","True"
+"AwardsShareManagers.csv","votesFirst","String","Found in AwardsSharePlayers.csv. 39 unique values out of 6879 total values (358 null/empty)","True"
+"Managers.csv","W","Integer","Found in Managers.csv. 115 unique values out of 3718 total values (0 null/empty)","True"
+"Teams.csv","WCWin","String","Found in Teams.csv. 2 unique values out of 3015 total values (2181 null/empty)","True"
+"People.csv","weight","Integer","Found in People.csv. 158 unique values out of 20936 total values (809 null/empty)","True"
+"SeriesPost.csv","wins","Integer","Found in SeriesPost.csv. 7 unique values out of 378 total values (0 null/empty)","True"
+"Fielding.csv","WP","String","Found in PitchingPost.csv. 6 unique values out of 6538 total values (50 null/empty)","True"
+"Teams.csv","WSWin","String","Found in Teams.csv. 2 unique values out of 3015 total values (357 null/empty)","True"
+"Batting.csv","X2B","Integer","Found in Batting.csv. 64 unique values out of 112184 total values (0 null/empty)","True"
+"Batting.csv","X3B","Integer","Found in Batting.csv. 32 unique values out of 112184 total values (0 null/empty)","True"
+"HomeGames.csv","year-key","Integer","Found in HomeGames.csv. 152 unique values out of 3200 total values (0 null/empty)","True"
+"AllstarFull.csv","yearID","Integer","Found in AllstarFull.csv. 89 unique values out of 5516 total values (0 null/empty)","True"
+"Fielding.csv","ZR","String","No values found in FieldingOFsplit.csv","True"

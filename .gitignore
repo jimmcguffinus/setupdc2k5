@@ -3,8 +3,24 @@
 *.psm1.bak
 *.psd1.bak
 
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+venv/
+env/
+.virtualenv/
+
 # LDIF files (generated)
+# Ignore all .ldf files except those in data/ldfs/
 *.ldf
+!data/ldfs/*.ldf
 
 # Generated directories
 userldifpackets/
@@ -12,6 +28,11 @@ userldifpackets/ous/
 userldifpackets/players/
 userldifpackets/managers/
 userldifpackets/allstars/
+
+# Generated CSVs (optional)
+# Uncomment the following lines if you don't want to track generated CSVs
+# data/schema.csv
+# data/conflicts.csv
 
 # VS Code
 .vscode/
@@ -38,5 +59,7 @@ logs/
 *.private
 
 # MLB data directory (should be managed separately)
+# Updated to reflect new structure
+data/csv/
 data/mlb/
 data/mlb/baseballdatabank/ 

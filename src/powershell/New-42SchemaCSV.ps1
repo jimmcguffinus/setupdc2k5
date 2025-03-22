@@ -10,6 +10,30 @@ param (
 
 Write-Host "Script starting..."
 
+# Load descriptions from CSV file once at the start of the script
+$descriptionsPath = Join-Path $PSScriptRoot "descriptions.csv"
+$descriptions = Import-Csv $descriptionsPath
+
+# Function to get description from the loaded descriptions
+function Get-AttributeDescription {
+    param (
+        [string]$Name,
+        [string]$SourceFile,
+        [object[]]$Values,
+        [string]$Type
+    )
+
+    # Look for matching description by AttributeName
+    $matchingDesc = $descriptions | Where-Object { $_.AttributeName -eq $Name }
+
+    if ($matchingDesc) {
+        return $matchingDesc.Description
+    }
+
+    # Fallback to a basic description if not found
+    return "$(Get-Date -Format 'yyyy-MM-dd') MLB: Attribute from $SourceFile"
+}
+
 # Function to determine the data type of a column
 function Get-AttributeType {
     param (
@@ -18,15 +42,6 @@ function Get-AttributeType {
         [string]$SourceFile
     )
 
-    # Get the base filename without extension
-    $baseFileName = [System.IO.Path]::GetFileNameWithoutExtension($SourceFile).ToLower()
-
-    # Hardcode MultiValue for specific files and columns
-    if ($baseFileName -in @("batting", "pitching", "appearances", "fielding")) {
-        if ($Name -in @("teamID", "lgID")) {
-            return "MultiValue"
-        }
-    }
 
     # For all other cases, just check if it's an integer or string
     $nonNullValues = $Values | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
@@ -46,28 +61,6 @@ function Get-AttributeType {
     }
 
     return $(if ($allInteger) { "Integer" } else { "String" })
-}
-
-# Function to generate a description for each attribute
-function Get-AttributeDescription {
-    param (
-        [string]$Name,
-        [string]$SourceFile,
-        [object[]]$Values,
-        [string]$Type
-    )
-
-    $nonNullValues = $Values | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
-    if ($null -eq $nonNullValues -or $nonNullValues.Count -eq 0) {
-        return "No values found in $SourceFile"
-    }
-
-    $uniqueValues = $nonNullValues | Select-Object -Unique
-    $totalValues = $Values.Count
-    $nullCount = ($Values | Where-Object { [string]::IsNullOrWhiteSpace($_) }).Count
-    $uniqueCount = $uniqueValues.Count
-
-    return "Found in $SourceFile. $uniqueCount unique values out of $totalValues total values ($nullCount null/empty)"
 }
 
 try {
@@ -106,7 +99,7 @@ try {
             SourceFile = "Hardcoded"
             AttributeName = $attr
             AttributeType = "MultiValue"
-            Description = "Hardcoded MultiValue attribute"
+            Description = "$(Get-Date -Format 'yyyy-MM-dd') MLB: Hardcoded MultiValue attribute"
             IsSingleValued = $false
         }
         $typeCounts["MultiValue"]++
@@ -133,7 +126,13 @@ try {
             
             # Get AD-compliant header name
             $adCompliantHeader = $header -replace '^[0-9]', 'X$0' -replace '[._]', '-'
-            
+
+            # Add special case for 'country'
+            if ($adCompliantHeader -eq 'country') {
+                $adCompliantHeader = 'mlbCountry'
+                Write-Host "    Renamed 'country' to 'mlbCountry' to avoid schema conflicts"
+            }
+
             # Skip if this is a hardcoded MultiValue attribute
             if ($adCompliantHeader -in $multiValueAttrs) {
                 continue

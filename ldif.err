@@ -1,3 +1,15 @@
-﻿Extraneous attribute name in a mod_spec list
-Failed on line 7.  The last token starts with '-'.
+﻿Entry DN: CN=aaronha01,OU=Players,OU=MLB,DC=mlb,DC=dev
+changetype: add
+Attribute 0) objectClass:user
+Attribute 1) cn:aaronha01
+Attribute 2) sAMAccountName:aaronha01
+Attribute 3) givenName:Hank
+Attribute 4) sn:Aaron
+Attribute 5) displayName:Hank Aaron
+Attribute 6) birthYear:1934 
+
+Add error on entry starting on line 1: Invalid Syntax
+The server side error is: 0x57 The parameter is incorrect.
+The extended server error is:
+00000057: LdapErr: DSID-0C09135C, comment: Error in attribute conversion operation, data 0, v6708
 An error has occurred in the program

@@ -1,0 +1,992 @@
+[
+  {
+    "SourceFile": "Fielding.csv",
+    "AttributeName": "A",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Assists - Number of times a fielder assists in an out."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "AB",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: At Bats - Number of times a player faces a pitcher."
+  },
+  {
+    "SourceFile": "TeamsFranchises.csv",
+    "AttributeName": "active",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Active Status - Indicates if a franchise is currently active."
+  },
+  {
+    "SourceFile": "Hardcoded",
+    "AttributeName": "appearances",
+    "AttributeType": "MultiValue",
+    "Description": "2025-03-20 MLB: Appearances - Player game appearances across multiple roles."
+  },
+  {
+    "SourceFile": "HomeGames.csv",
+    "AttributeName": "attendance",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Attendance - Total number of spectators at home games."
+  },
+  {
+    "SourceFile": "schema_analysis.csv",
+    "AttributeName": "AttributeName",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Attribute Name - Name of a data attribute in the schema."
+  },
+  {
+    "SourceFile": "schema_analysis.csv",
+    "AttributeName": "AttributeType",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Attribute Type - Data type of an attribute (e.g., Integer, String)."
+  },
+  {
+    "SourceFile": "schema_analysis.csv",
+    "AttributeName": "AuxClass",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Auxiliary Class - Additional classification for schema attributes."
+  },
+  {
+    "SourceFile": "AwardsManagers.csv",
+    "AttributeName": "awardID",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Award ID - Identifier for a manager’s award."
+  },
+  {
+    "SourceFile": "HallOfFame.csv",
+    "AttributeName": "ballots",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Ballots - Number of ballots cast for Hall of Fame voting."
+  },
+  {
+    "SourceFile": "Pitching.csv",
+    "AttributeName": "BAOpp",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Batting Average Against - Opponents’ batting average against a pitcher."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "bats",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Bats - Player’s batting hand (e.g., left, right, both)."
+  },
+  {
+    "SourceFile": "Hardcoded",
+    "AttributeName": "batting",
+    "AttributeType": "MultiValue",
+    "Description": "2025-03-20 MLB: Batting Stats - Collection of batting-related statistics."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "BB",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Base on Balls - Number of walks a batter receives."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "BBA",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Bases on Balls Allowed - Walks allowed by a team’s pitchers."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "bbrefID",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Baseball-Reference ID - Unique identifier from Baseball-Reference."
+  },
+  {
+    "SourceFile": "Pitching.csv",
+    "AttributeName": "BFP",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Batters Faced by Pitcher - Total batters a pitcher faces."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "birthCity",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Birth City - City where a player was born."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "birthCountry",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Birth Country - Country where a player was born."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "birthDay",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Birth Day - Day of the month a player was born."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "birthMonth",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Birth Month - Month a player was born."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "birthState",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Birth State - State where a player was born."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "birthYear",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Birth Year - Year a player was born."
+  },
+  {
+    "SourceFile": "Pitching.csv",
+    "AttributeName": "BK",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Balks - Illegal pitching actions by a pitcher."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "BPF",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Batter Park Factor - Effect of park on batting stats."
+  },
+  {
+    "SourceFile": "HallOfFame.csv",
+    "AttributeName": "category",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Category - Role or type for Hall of Fame nominee (e.g., player, manager)."
+  },
+  {
+    "SourceFile": "Pitching.csv",
+    "AttributeName": "CG",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Complete Games - Games pitched entirely by one pitcher."
+  },
+  {
+    "SourceFile": "Parks.csv",
+    "AttributeName": "city",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: City - Location city of a ballpark."
+  },
+  {
+    "SourceFile": "Parks.csv",
+    "AttributeName": "country",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Country - Country where a ballpark is located."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "CS",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Caught Stealing - Times a runner is caught stealing a base."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "deathCity",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Death City - City where a player passed away."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "deathCountry",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Death Country - Country where a player passed away."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "deathDay",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Death Day - Day of the month a player passed away."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "deathMonth",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Death Month - Month a player passed away."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "deathState",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Death State - State where a player passed away."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "deathYear",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Death Year - Year a player passed away."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "debut",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Debut - Date of a player’s first MLB game."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "divID",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Division ID - Identifier for a team’s division."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "DivWin",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Division Win - Indicates if a team won its division."
+  },
+  {
+    "SourceFile": "Fielding.csv",
+    "AttributeName": "DP",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Double Plays - Number of double plays a fielder participated in."
+  },
+  {
+    "SourceFile": "Fielding.csv",
+    "AttributeName": "E",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Errors - Number of fielding mistakes by a player."
+  },
+  {
+    "SourceFile": "Pitching.csv",
+    "AttributeName": "ER",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Earned Runs - Runs allowed by a pitcher due to hits/errors."
+  },
+  {
+    "SourceFile": "Pitching.csv",
+    "AttributeName": "ERA",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Earned Run Average - Average earned runs allowed per 9 innings."
+  },
+  {
+    "SourceFile": "Hardcoded",
+    "AttributeName": "fielding",
+    "AttributeType": "MultiValue",
+    "Description": "2025-03-20 MLB: Fielding Stats - Collection of fielding-related statistics."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "finalGame",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Final Game - Date of a player’s last MLB game."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "FP",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Fielding Percentage - Ratio of successful fielding plays."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "franchID",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Franchise ID - Unique identifier for a team franchise."
+  },
+  {
+    "SourceFile": "TeamsFranchises.csv",
+    "AttributeName": "franchName",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Franchise Name - Official name of a team franchise."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "G",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games - Number of games a player participated in."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-1b",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games at First Base - Games played at first base."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-2b",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games at Second Base - Games played at second base."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-3b",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games at Third Base - Games played at third base."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-all",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games All - Total games played in any role."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-batting",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games Batting - Games where a player batted."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-c",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games as Catcher - Games played as a catcher."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-cf",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games in Center Field - Games played in center field."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-defense",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games on Defense - Games played in a defensive position."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-dh",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games as Designated Hitter - Games played as a DH."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-lf",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games in Left Field - Games played in left field."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-of",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games in Outfield - Total games played in the outfield."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-p",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games as Pitcher - Games pitched."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-ph",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games as Pinch Hitter - Games batted as a substitute."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-pr",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games as Pinch Runner - Games run as a substitute."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-rf",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games in Right Field - Games played in right field."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "G-ss",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games at Shortstop - Games played at shortstop."
+  },
+  {
+    "SourceFile": "AllstarFull.csv",
+    "AttributeName": "gameID",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Game ID - Unique identifier for an All-Star game."
+  },
+  {
+    "SourceFile": "AllstarFull.csv",
+    "AttributeName": "gameNum",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Game Number - Number of All-Star games in a season."
+  },
+  {
+    "SourceFile": "HomeGames.csv",
+    "AttributeName": "games",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games - Number of home games played."
+  },
+  {
+    "SourceFile": "FieldingOF.csv",
+    "AttributeName": "Gcf",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games in Center Field - Outfield games in center."
+  },
+  {
+    "SourceFile": "Pitching.csv",
+    "AttributeName": "GF",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games Finished - Games a pitcher completed."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "Ghome",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Home Games - Number of games played at home."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "GIDP",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Grounded Into Double Play - Times a batter hits into a double play."
+  },
+  {
+    "SourceFile": "FieldingOF.csv",
+    "AttributeName": "Glf",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games in Left Field - Outfield games in left."
+  },
+  {
+    "SourceFile": "AllstarFull.csv",
+    "AttributeName": "GP",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games Played - All-Star games a player participated in."
+  },
+  {
+    "SourceFile": "FieldingOF.csv",
+    "AttributeName": "Grf",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games in Right Field - Outfield games in right."
+  },
+  {
+    "SourceFile": "Appearances.csv",
+    "AttributeName": "GS",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Games Started - Games a player started."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "H",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Hits - Number of successful hits by a batter."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "HA",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Hits Allowed - Hits allowed by a team’s pitchers."
+  },
+  {
+    "SourceFile": "ManagersHalf.csv",
+    "AttributeName": "half",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Half - Season half (1st or 2nd) for manager stats."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "HBP",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Hit By Pitch - Times a batter is hit by a pitch."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "height",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Height - Player’s height in inches."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "HR",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Home Runs - Number of home runs hit by a batter."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "HRA",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Home Runs Allowed - Home runs allowed by a team’s pitchers."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "IBB",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Intentional Base on Balls - Intentional walks given to a batter."
+  },
+  {
+    "SourceFile": "HallOfFame.csv",
+    "AttributeName": "inducted",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Inducted - Indicates if a person was inducted into the Hall of Fame."
+  },
+  {
+    "SourceFile": "Fielding.csv",
+    "AttributeName": "InnOuts",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Innings Outs - Total outs recorded while fielding."
+  },
+  {
+    "SourceFile": "Managers.csv",
+    "AttributeName": "inseason",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: In-Season - Manager’s order of appointment within a season."
+  },
+  {
+    "SourceFile": "Pitching.csv",
+    "AttributeName": "IPouts",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Innings Pitched Outs - Total outs pitched by a pitcher."
+  },
+  {
+    "SourceFile": "Managers.csv",
+    "AttributeName": "L",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Losses - Number of games lost under a manager."
+  },
+  {
+    "SourceFile": "HomeGames.csv",
+    "AttributeName": "league-key",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: League Key - Identifier for a team’s league."
+  },
+  {
+    "SourceFile": "AllstarFull.csv",
+    "AttributeName": "lgID",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: League ID - Identifier for a player’s league."
+  },
+  {
+    "SourceFile": "SeriesPost.csv",
+    "AttributeName": "lgIDloser",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: League ID Loser - League of the losing team in postseason."
+  },
+  {
+    "SourceFile": "SeriesPost.csv",
+    "AttributeName": "lgIDwinner",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: League ID Winner - League of the winning team in postseason."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "LgWin",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: League Win - Indicates if a team won its league."
+  },
+  {
+    "SourceFile": "SeriesPost.csv",
+    "AttributeName": "losses",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Losses - Number of losses in a postseason series."
+  },
+  {
+    "SourceFile": "TeamsFranchises.csv",
+    "AttributeName": "NAassoc",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: National Association - Associated NA franchise."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "name",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Team Name - Official name of a team."
+  },
+  {
+    "SourceFile": "Schools.csv",
+    "AttributeName": "name-full",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Full Name - Full name of a school."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "nameFirst",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: First Name - Player’s first name."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "nameGiven",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Given Name - Player’s full given name."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "nameLast",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Last Name - Player’s last name."
+  },
+  {
+    "SourceFile": "HallOfFame.csv",
+    "AttributeName": "needed",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Needed Votes - Votes required for Hall of Fame induction."
+  },
+  {
+    "SourceFile": "HallOfFame.csv",
+    "AttributeName": "needed-note",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Needed Note - Additional notes on vote requirements."
+  },
+  {
+    "SourceFile": "AwardsManagers.csv",
+    "AttributeName": "notes",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Notes - Additional comments on manager awards."
+  },
+  {
+    "SourceFile": "HomeGames.csv",
+    "AttributeName": "openings",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Openings - Number of opening games at home."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "park",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Park - Name of a team’s home ballpark."
+  },
+  {
+    "SourceFile": "Parks.csv",
+    "AttributeName": "park-alias",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Park Alias - Alternative name for a ballpark."
+  },
+  {
+    "SourceFile": "HomeGames.csv",
+    "AttributeName": "park-key",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Park Key - Unique identifier for a ballpark."
+  },
+  {
+    "SourceFile": "Parks.csv",
+    "AttributeName": "park-name",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Park Name - Official name of a ballpark."
+  },
+  {
+    "SourceFile": "Fielding.csv",
+    "AttributeName": "PB",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Passed Balls - Balls a catcher fails to catch."
+  },
+  {
+    "SourceFile": "Hardcoded",
+    "AttributeName": "pitching",
+    "AttributeType": "MultiValue",
+    "Description": "2025-03-20 MLB: Pitching Stats - Collection of pitching-related statistics."
+  },
+  {
+    "SourceFile": "AllstarFull.csv",
+    "AttributeName": "playerID",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Player ID - Unique identifier for a player."
+  },
+  {
+    "SourceFile": "Managers.csv",
+    "AttributeName": "plyrMgr",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Player-Manager - Indicates if a manager also played."
+  },
+  {
+    "SourceFile": "Fielding.csv",
+    "AttributeName": "PO",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Putouts - Number of outs recorded by a fielder."
+  },
+  {
+    "SourceFile": "AwardsShareManagers.csv",
+    "AttributeName": "pointsMax",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Maximum Points - Total possible points for an award."
+  },
+  {
+    "SourceFile": "AwardsShareManagers.csv",
+    "AttributeName": "pointsWon",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Points Won - Points received for an award."
+  },
+  {
+    "SourceFile": "Fielding.csv",
+    "AttributeName": "POS",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Position - Fielding position played."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "PPF",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Pitcher Park Factor - Effect of park on pitching stats."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "R",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Runs - Number of runs scored by a player."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "RA",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Runs Allowed - Runs allowed by a team."
+  },
+  {
+    "SourceFile": "Managers.csv",
+    "AttributeName": "rank",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Rank - Manager’s team ranking in standings."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "RBI",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Runs Batted In - Runs driven in by a batter."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "retroID",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Retro ID - Unique identifier from Retrosheet."
+  },
+  {
+    "SourceFile": "BattingPost.csv",
+    "AttributeName": "round",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Round - Postseason round (e.g., World Series)."
+  },
+  {
+    "SourceFile": "Salaries.csv",
+    "AttributeName": "salary",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Salary - Player’s annual salary."
+  },
+  {
+    "SourceFile": "schema_analysis.csv",
+    "AttributeName": "SampleValue",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Sample Value - Example value of an attribute."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "SB",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Stolen Bases - Bases successfully stolen by a player."
+  },
+  {
+    "SourceFile": "CollegePlaying.csv",
+    "AttributeName": "schoolID",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: School ID - Identifier for a player’s college."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "SF",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Sacrifice Flies - Fly balls that score a run."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "SH",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Sacrifice Hits - Bunts that advance a runner."
+  },
+  {
+    "SourceFile": "Pitching.csv",
+    "AttributeName": "SHO",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Shutouts - Games pitched with no runs allowed."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "SO",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Strikeouts - Times a batter strikes out."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "SOA",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Strikeouts Allowed - Strikeouts by a team’s pitchers."
+  },
+  {
+    "SourceFile": "schema_analysis.csv",
+    "AttributeName": "SourceFile",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Source File - File containing the attribute data."
+  },
+  {
+    "SourceFile": "HomeGames.csv",
+    "AttributeName": "span-first",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Span First - Start date of home game span."
+  },
+  {
+    "SourceFile": "HomeGames.csv",
+    "AttributeName": "span-last",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Span Last - End date of home game span."
+  },
+  {
+    "SourceFile": "AllstarFull.csv",
+    "AttributeName": "startingPos",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Starting Position - Position a player started in All-Star game."
+  },
+  {
+    "SourceFile": "Parks.csv",
+    "AttributeName": "state",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: State - State where a ballpark is located."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "stint",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Stint - Order of a player’s team stint in a season."
+  },
+  {
+    "SourceFile": "Pitching.csv",
+    "AttributeName": "SV",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Saves - Games a pitcher preserves a lead."
+  },
+  {
+    "SourceFile": "HomeGames.csv",
+    "AttributeName": "team-key",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Team Key - Unique identifier for a team."
+  },
+  {
+    "SourceFile": "AllstarFull.csv",
+    "AttributeName": "teamID",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Team ID - Identifier for a player’s team."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "teamIDBR",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Team ID BR - Baseball-Reference team identifier."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "teamIDlahman45",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Team ID Lahman - Lahman database team identifier."
+  },
+  {
+    "SourceFile": "SeriesPost.csv",
+    "AttributeName": "teamIDloser",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Team ID Loser - Identifier for losing team in postseason."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "teamIDretro",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Team ID Retro - Retrosheet team identifier."
+  },
+  {
+    "SourceFile": "SeriesPost.csv",
+    "AttributeName": "teamIDwinner",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Team ID Winner - Identifier for winning team in postseason."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "throws",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Throws - Player’s throwing hand (e.g., left, right)."
+  },
+  {
+    "SourceFile": "AwardsManagers.csv",
+    "AttributeName": "tie",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Tie - Indicates if an award vote was tied."
+  },
+  {
+    "SourceFile": "SeriesPost.csv",
+    "AttributeName": "ties",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Ties - Number of tied games in a postseason series."
+  },
+  {
+    "SourceFile": "FieldingPost.csv",
+    "AttributeName": "TP",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Triple Plays - Number of triple plays in postseason."
+  },
+  {
+    "SourceFile": "HallOfFame.csv",
+    "AttributeName": "votedBy",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Voted By - Group or committee voting for Hall of Fame."
+  },
+  {
+    "SourceFile": "HallOfFame.csv",
+    "AttributeName": "votes",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Votes - Number of votes received for Hall of Fame."
+  },
+  {
+    "SourceFile": "AwardsShareManagers.csv",
+    "AttributeName": "votesFirst",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: First Place Votes - Number of first-place award votes."
+  },
+  {
+    "SourceFile": "Managers.csv",
+    "AttributeName": "W",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Wins - Number of games won under a manager."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "WCWin",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Wild Card Win - Indicates if a team won a wild card."
+  },
+  {
+    "SourceFile": "People.csv",
+    "AttributeName": "weight",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Weight - Player’s weight in pounds."
+  },
+  {
+    "SourceFile": "SeriesPost.csv",
+    "AttributeName": "wins",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Wins - Number of wins in a postseason series."
+  },
+  {
+    "SourceFile": "Fielding.csv",
+    "AttributeName": "WP",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Wild Pitches - Pitches a catcher cannot control."
+  },
+  {
+    "SourceFile": "Teams.csv",
+    "AttributeName": "WSWin",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: World Series Win - Indicates if a team won the World Series."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "X2B",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Doubles - Number of two-base hits by a batter."
+  },
+  {
+    "SourceFile": "Batting.csv",
+    "AttributeName": "X3B",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Triples - Number of three-base hits by a batter."
+  },
+  {
+    "SourceFile": "HomeGames.csv",
+    "AttributeName": "year-key",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Year Key - Year of home game data."
+  },
+  {
+    "SourceFile": "AllstarFull.csv",
+    "AttributeName": "yearID",
+    "AttributeType": "Integer",
+    "Description": "2025-03-20 MLB: Year ID - Year of an All-Star game or event."
+  },
+  {
+    "SourceFile": "Fielding.csv",
+    "AttributeName": "ZR",
+    "AttributeType": "String",
+    "Description": "2025-03-20 MLB: Zone Rating - Measure of fielding range efficiency."
+  }
+]
