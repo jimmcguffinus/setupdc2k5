@@ -33,9 +33,13 @@ param (
 )
 
 # Function to generate a unique OID
+
 function New-OID {
-    return "1.2.840.113556.1.8000.2554.$(Get-Random -Minimum 1000 -Maximum 9999)"
+    $Prefix = "1.2.840.113556.4.2424.24242"
+    return "$Prefix.$(Get-Random -Minimum 1000 -Maximum 9999)"
 }
+    
+
 
 # Verify prerequisites
 if (-not (Get-Module -ListAvailable -Name ActiveDirectory)) {

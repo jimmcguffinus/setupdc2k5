@@ -1,0 +1,161 @@
+AttributeName,DataType,Description
+A,Integer,Assists made by a defensive player
+AB,Integer,At bats - number of official batting attempts
+active,Multi String,Whether the player is currently active
+appearances,Integer,Number of game appearances
+attendance,Integer,Total number of fans attending
+awardID,Multi String,Identifier for award type
+ballots,Integer,Number of ballots received
+BAOpp,Single String (Decimal),Batting average against - pitcher stat
+bats,Multi String,"Player's batting side (Left, Right, Switch)"
+batting,Multi String,Batting statistics object or category
+BB,Integer,Base on balls (walks)
+BBA,Integer,Walks allowed by a pitcher
+bbrefID,Multi String,Baseball-Reference.com player ID
+BFP,Integer,Batters faced by pitcher
+birthCity,Multi String,City of birth
+birthCountry,Multi String,Country of birth
+birthDay,Integer,Day of birth
+birthMonth,Integer,Month of birth
+birthState,Multi String,State of birth
+birthYear,Integer,Year of birth
+BK,Integer,Balks committed by pitcher
+BPF,Integer,Batting park factor
+category,Multi String,No description provided
+CG,Integer,Complete games pitched
+city,Multi String,No description provided
+CS,Integer,Caught stealing
+deathCity,Multi String,City of death
+deathCountry,Multi String,Country of death
+deathDay,Multi String,Day of death
+deathMonth,Multi String,Month of death
+deathState,Multi String,State of death
+deathYear,Multi String,Year of death
+debut,Multi String,MLB debut date
+divID,Multi String,Division ID
+DivWin,Multi String,Whether the team won the division
+DP,Integer,Double plays turned
+E,Integer,Errors committed
+ER,Integer,Earned runs allowed
+ERA,Single String (Decimal),Earned run average
+fielding,Integer,No description provided
+finalGame,Multi String,No description provided
+FP,Single String (Decimal),Fielding percentage
+franchID,Multi String,No description provided
+franchName,Multi String,No description provided
+G,Integer,Games played
+G-1b,Integer,No description provided
+G-2b,Integer,No description provided
+G-3b,Integer,No description provided
+G-all,Integer,No description provided
+G-batting,Integer,No description provided
+G-c,Integer,No description provided
+G-cf,Integer,No description provided
+G-defense,Integer,No description provided
+G-dh,Integer,No description provided
+G-lf,Integer,No description provided
+G-of,Integer,No description provided
+G-p,Integer,No description provided
+G-ph,Integer,No description provided
+G-pr,Integer,No description provided
+G-rf,Integer,No description provided
+G-ss,Integer,No description provided
+gameID,Multi String,No description provided
+gameNum,Integer,No description provided
+games,Integer,No description provided
+Gcf,Integer,No description provided
+GF,Integer,No description provided
+Ghome,Integer,No description provided
+GIDP,Integer,No description provided
+Glf,Integer,No description provided
+GP,Integer,No description provided
+Grf,Integer,No description provided
+GS,Integer,No description provided
+H,Integer,Hits
+HA,Integer,No description provided
+half,Integer,No description provided
+HBP,Integer,No description provided
+height,Integer,No description provided
+HR,Integer,Home runs
+HRA,Integer,No description provided
+IBB,Integer,Intentional walks
+inducted,Multi String,No description provided
+InnOuts,Integer,No description provided
+inseason,Integer,No description provided
+IPouts,Integer,Innings pitched (outs)
+L,Integer,No description provided
+league-key,Multi String,No description provided
+lgID,Multi String,No description provided
+lgIDloser,Multi String,No description provided
+lgIDwinner,Multi String,No description provided
+LgWin,Multi String,No description provided
+losses,Integer,No description provided
+mlbCountry,Multi String,No description provided
+NAassoc,Multi String,No description provided
+name,Multi String,No description provided
+name-full,Multi String,No description provided
+nameFirst,Multi String,No description provided
+nameGiven,Multi String,No description provided
+nameLast,Multi String,No description provided
+needed,Multi String,No description provided
+needed-note,Multi String,No description provided
+notes,Multi String,No description provided
+openings,Multi String,No description provided
+park,Multi String,No description provided
+park-alias,Multi String,No description provided
+park-key,Multi String,No description provided
+park-name,Multi String,No description provided
+PB,Multi String,No description provided
+pitching,Multi String,No description provided
+playerID,Multi String,No description provided
+plyrMgr,Multi String,No description provided
+PO,Integer,No description provided
+pointsMax,Integer,No description provided
+pointsWon,Single String (Decimal),No description provided
+POS,Multi String,No description provided
+PPF,Integer,No description provided
+R,Integer,Runs scored
+RA,Integer,No description provided
+rank,Integer,No description provided
+RBI,Integer,Runs batted in
+retroID,Multi String,No description provided
+round,Multi String,No description provided
+salary,Integer,No description provided
+SB,Integer,Stolen bases
+schoolID,Multi String,No description provided
+SF,Integer,No description provided
+SH,Integer,No description provided
+SHO,Integer,No description provided
+SO,Integer,Strikeouts
+SOA,Integer,No description provided
+span-first,Multi String,No description provided
+span-last,Multi String,No description provided
+startingPos,Multi String,No description provided
+state,Multi String,No description provided
+stint,Integer,No description provided
+SV,Integer,No description provided
+team-key,Multi String,No description provided
+teamID,Multi String,No description provided
+teamIDBR,Multi String,No description provided
+teamIDlahman45,Multi String,No description provided
+teamIDloser,Multi String,No description provided
+teamIDretro,Multi String,No description provided
+teamIDwinner,Multi String,No description provided
+throws,Multi String,No description provided
+tie,Integer,No description provided
+ties,Integer,No description provided
+TP,Integer,No description provided
+votedBy,Multi String,No description provided
+votes,Integer,No description provided
+votesFirst,Integer,No description provided
+W,Integer,Wins
+WCWin,Multi String,No description provided
+weight,Integer,No description provided
+wins,Integer,No description provided
+WP,Integer,Wild pitches
+WSWin,Multi String,No description provided
+X2B,Integer,Doubles (2-base hits)
+X3B,Integer,Triples (3-base hits)
+year-key,Integer,No description provided
+yearID,Integer,Year of the season
+ZR,Integer,Zone rating

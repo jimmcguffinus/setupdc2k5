@@ -1,0 +1,11 @@
+dn: OU=MLB,DC=mlb,DC=dev
+changetype: modify
+replace: description
+description: MLB Organization Unit
+-
+
+dn: OU=Players,OU=MLB,DC=mlb,DC=dev
+changetype: modify
+replace: description
+description: Players Container
+-

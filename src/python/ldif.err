@@ -1,0 +1,45 @@
+﻿Entry DN: CN=Christian Frederick Albert John Henry David Betzel [betzebr01 1914-1918],OU=Players,OU=MLB,DC=mlb,DC=dev
+changetype: add
+Attribute 0) objectClass:top person organizationalPerson user
+Attribute 1) cn:Christian Frederick Albert John Henry David Betzel [betzebr01 1914-1918]
+Attribute 2) sAMAccountName:betzebr01
+Attribute 3) userPrincipalName:betzebr01@mlb.dev
+Attribute 4) givenName:Bruno
+Attribute 5) sn:Betzel
+Attribute 6) displayName:Christian Frederick Albert John Henry David Betzel [betzebr01 1914-1918]
+Attribute 7) description:USA|OH|Chattanooga
+Attribute 8) name:Christian Frederick Albert John Henry David Betzel [betzebr01 1914-1918]
+Attribute 9) userAccountControl:512
+Attribute 10) unicodePwd: UNPRINTABLE BINARY(32)
+Attribute 11) playerID:betzebr01
+Attribute 12) birthYear:1894
+Attribute 13) birthMonth:12
+Attribute 14) birthDay:6
+Attribute 15) mlbCountry:USA
+Attribute 16) birthState:OH
+Attribute 17) birthCity:Chattanooga
+Attribute 18) deathYear:1965
+Attribute 19) deathMonth:2
+Attribute 20) deathDay:7
+Attribute 21) deathCountry:USA
+Attribute 22) deathState:FL
+Attribute 23) deathCity:West Hollywood
+Attribute 24) nameFirst:Bruno
+Attribute 25) nameLast:Betzel
+Attribute 26) nameGiven:Christian Frederick Albert John Henry David
+Attribute 27) weight:158
+Attribute 28) height:69
+Attribute 29) bats:R
+Attribute 30) throws:R
+Attribute 31) debut:1914-09-03
+Attribute 32) finalGame:1918-09-02
+Attribute 33) retroID:betzb101
+Attribute 34) bbrefID:betzebr01
+
+Add error on entry starting on line 1: Constraint Violation
+The server side error is: 0x2082 A value for the attribute was not in the acceptable range of values.
+The extended server error is:
+00002082: AtrErr: DSID-03152064, #1:
+	0: 00002082: DSID-03152064, problem 1005 (CONSTRAINT_ATT_TYPE), data 0, Att 3 (cn):len 144
+
+An error has occurred in the program

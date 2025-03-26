@@ -69,5 +69,3 @@ function Enable-42SchemaUpdates {
     }
 }
 
-# Export the function
-Export-ModuleMember -Function Enable-42SchemaUpdates 

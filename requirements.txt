@@ -1,0 +1,8 @@
+# Core dependencies
+setuptools>=65.5.1
+wheel>=0.38.4
+
+# Development dependencies
+black>=23.3.0  # Code formatting
+flake8>=6.0.0  # Code linting
+pytest>=7.3.1  # Testing 

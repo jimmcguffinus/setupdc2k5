@@ -1,0 +1,35 @@
+dn: CN=Anthony Aaron Zych [zychto01 2015-2017],OU=Players,OU=MLB,DC=mlb,DC=dev
+changetype: add
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Anthony Aaron Zych [zychto01 2015-2017]
+sAMAccountName: zychto01
+userPrincipalName: zychto01@mlb.dev
+givenName: Tony
+sn: Zych
+displayName: Anthony Aaron Zych [zychto01 2015-2017]
+description: USA|IL|Monee
+name: Anthony Aaron Zych [zychto01 2015-2017]
+userAccountControl: 512
+unicodePwd:: IgBNAEwAQgBQAGwAYQB5AGUAcgAyADAAMgA1ACEAIgA=
+playerID: zychto01
+birthYear: 1990
+birthMonth: 8
+birthDay: 7
+mlbCountry: USA
+birthState: IL
+birthCity: Monee
+nameFirst: Tony
+nameLast: Zych
+nameGiven: Anthony Aaron
+weight: 190
+height: 75
+bats: R
+throws: R
+debut: 2015-09-04
+finalGame: 2017-08-19
+retroID: zycht001
+bbrefID: zychto01
+

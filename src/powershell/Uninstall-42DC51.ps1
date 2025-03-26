@@ -21,6 +21,21 @@ param (
     [switch]$NoRebootOnCompletion = $false
 )
 
+<#
+
+# Windows PowerShell script for AD DS Deployment
+#
+
+Import-Module ADDSDeployment
+Uninstall-ADDSDomainController `
+-DemoteOperationMasterRole:$true `
+-ForceRemoval:$true `
+-Force:$true
+
+
+
+#>
+
 if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Warning "This script requires administrative privileges. Please run as Administrator."
     exit 1

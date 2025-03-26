@@ -2,17 +2,20 @@
 [CmdletBinding()]
 param (
     [string[]]$CsvFolders             = @("C:\data\mlb\baseballdatabank\core", "C:\data\mlb\baseballdatabank\contrib"),
-    [string]$OutputFile               = "schema\schema.csv",
+    [string]$OutputFile               = "C:\gh\setupdc2k5\data\csv\schema.powershell.csv",
     [string]$EntityColumn             = $null,
     [switch]$ExportConflicts,
-    [string]$ConflictOutputFile       = "schema\conflicts.csv"
+    [string]$ConflictOutputFile       = "C:\gh\setupdc2k5\schema\conflicts.powershell.csv"
 )
+
+# Start timing
+$startTime = Get-Date
 
 Write-Host "Script starting..."
 
 # Load descriptions from CSV file once at the start of the script
-$descriptionsPath = Join-Path $PSScriptRoot "descriptions.csv"
-$descriptions = Import-Csv $descriptionsPath
+$descriptionsPath = "C:\gh\setupdc2k5\descriptions.csv"
+$descriptions = if (Test-Path $descriptionsPath) { Import-Csv $descriptionsPath } else { @() }
 
 # Function to get description from the loaded descriptions
 function Get-AttributeDescription {
@@ -23,15 +26,14 @@ function Get-AttributeDescription {
         [string]$Type
     )
 
-    # Look for matching description by AttributeName
     $matchingDesc = $descriptions | Where-Object { $_.AttributeName -eq $Name }
-
     if ($matchingDesc) {
         return $matchingDesc.Description
     }
 
-    # Fallback to a basic description if not found
-    return "$(Get-Date -Format 'yyyy-MM-dd') MLB: Attribute from $SourceFile"
+    $fallbackDesc = "$(Get-Date -Format 'yyyy-MM-dd') MLB: Attribute from $SourceFile"
+    Write-Host "    Warning: Description not found for $Name in descriptions.csv. Using fallback: $fallbackDesc"
+    return $fallbackDesc
 }
 
 # Function to determine the data type of a column
@@ -42,25 +44,45 @@ function Get-AttributeType {
         [string]$SourceFile
     )
 
+    Write-Host "      Checking attribute: $Name"
 
-    # For all other cases, just check if it's an integer or string
+    # Filter out empty or whitespace-only values
     $nonNullValues = $Values | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
     
     # Default to String for empty/null columns
     if ($null -eq $nonNullValues -or $nonNullValues.Count -eq 0) {
+        Write-Host "      No non-null values, defaulting to String"
         return "String"
     }
 
-    # Check for integer type
-    $allInteger = $true
+    # Special cases for String
+    if ($Name -in @("half", "inseason", "startingPos", "needed")) {
+        Write-Host "      Special case: $Name forced to String"
+        return "String"
+    }
+
+    # Special cases for Integer
+    if ($Name -in @("ballots", "CS", "PB", "pointsWon", "SB", "votes", "votesFirst", "WP")) {
+        Write-Host "      Special case: $Name forced to Integer"
+        return "Integer"
+    }
+
+    # Check for integer type with 90% threshold
+    $integerCount = 0
+    $totalCount = $nonNullValues.Count
     foreach ($value in $nonNullValues) {
-        if ($value -notmatch '^-?\d+$') {
-            $allInteger = $false
-            break
+        if ($value -match '^-?\d+$') {
+            $integerCount++
         }
     }
 
-    return $(if ($allInteger) { "Integer" } else { "String" })
+    if ($totalCount -gt 0 -and ($integerCount / $totalCount) -ge 0.9) {
+        Write-Host "      $integerCount/$totalCount values are integers, detected as Integer"
+        return "Integer"
+    }
+
+    Write-Host "      Defaulting to String (only $integerCount/$totalCount values are integers)"
+    return "String"
 }
 
 try {
@@ -93,7 +115,7 @@ try {
     }
 
     # Hardcode MultiValue attributes upfront
-    $multiValueAttrs = @("batting", "appearances", "fielding", "pitching")
+    $multiValueAttrs = @("batting", "fielding", "pitching", "attendance", "notes")
     foreach ($attr in $multiValueAttrs) {
         $uniqueAttributes[$attr] = [PSCustomObject]@{
             SourceFile = "Hardcoded"
@@ -138,29 +160,40 @@ try {
                 continue
             }
 
-            # Get attribute type (only Integer or String)
-            $nonNullValues = $Values | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
-            if ($null -eq $nonNullValues -or $nonNullValues.Count -eq 0) {
-                $type = "String"
-            } else {
-                $allInteger = $true
-                foreach ($value in $nonNullValues) {
-                    if ($value -notmatch '^-?\d+$') {
-                        $allInteger = $false
-                        break
-                    }
-                }
-                $type = if ($allInteger) { "Integer" } else { "String" }
+            # Prioritize Pitching.csv for WP
+            if ($adCompliantHeader -eq "WP" -and $file.Name -ne "Pitching.csv") {
+                continue
             }
+
+            # Get attribute type
+            $type = Get-AttributeType -Name $adCompliantHeader -Values $values -SourceFile $file.Name
             Write-Host "    Type detected: $type"
+
+            # Post-detection override for CS, PB, SB
+            if ($adCompliantHeader -in @("CS", "PB", "SB")) {
+                Write-Host "    Overriding type for $adCompliantHeader to Integer (post-detection)"
+                $type = "Integer"
+            }
             
             if ($uniqueAttributes[$adCompliantHeader]) {
                 $existing = $uniqueAttributes[$adCompliantHeader]
                 if ($existing.AttributeType -ne $type) {
-                    # Always resolve Integer vs String conflicts to String
-                    $resolvedType = "String"
+                    Write-Host "    Type conflict for $adCompliantHeader`: $($existing.AttributeType) (from $($existing.SourceFile)) vs $type (from $($file.Name))"
+                    # Preserve Integer type for CS, PB, SB
+                    if ($adCompliantHeader -in @("CS", "PB", "SB")) {
+                        $resolvedType = "Integer"
+                        Write-Host "    Preserving Integer type for $adCompliantHeader"
+                    } else {
+                        $resolvedType = "String"
+                    }
                     
-                    $typeConflicts[$adCompliantHeader] = @($existing.AttributeType, $type, $existing.SourceFile, $file.Name)
+                    $typeConflicts[$adCompliantHeader] = [PSCustomObject]@{
+                        AttributeName = $adCompliantHeader
+                        OriginalType = $existing.AttributeType
+                        ConflictingType = $type
+                        OriginalFile = $existing.SourceFile
+                        ConflictingFile = $file.Name
+                    }
                     $typeCounts[$existing.AttributeType]--
                     $typeCounts[$resolvedType]++
                     
@@ -173,7 +206,7 @@ try {
                     AttributeName = $adCompliantHeader
                     AttributeType = $type
                     Description = Get-AttributeDescription -Name $adCompliantHeader -SourceFile $file.Name -Values $values -Type $type
-                    IsSingleValued = $true
+                    IsSingleValued = $type -ne "MultiValue"
                 }
                 $typeCounts[$type]++
             }
@@ -199,20 +232,16 @@ try {
 
     # Export conflicts if requested
     if ($ExportConflicts -and $typeConflicts.Count -gt 0) {
-        $conflicts = $typeConflicts.GetEnumerator() | ForEach-Object {
-            [PSCustomObject]@{
-                AttributeName = $_.Key
-                OriginalType = $_.Value[0]
-                ConflictingType = $_.Value[1]
-                OriginalFile = $_.Value[2]
-                ConflictingFile = $_.Value[3]
-            }
-        }
-        $conflicts | Export-Csv -Path $ConflictOutputFile -NoTypeInformation -Encoding UTF8
+        $typeConflicts.Values | Export-Csv -Path $ConflictOutputFile -NoTypeInformation -Encoding UTF8
     }
-
+    Copy-Item C:\gh\setupdc2k5\schema\schema.powershell.csv C:\gh\setupdc2k5\schema\schema.csv
     Write-Host "Schema analysis complete!"
 } catch {
     Write-Error "Analysis failed: $_"
     exit 1
+} finally {
+    # Calculate and display total execution time
+    $endTime = Get-Date
+    $duration = $endTime - $startTime
+    Write-Host "`nTotal execution time: $($duration.TotalSeconds) seconds"
 }

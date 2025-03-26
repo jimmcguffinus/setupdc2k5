@@ -17,6 +17,18 @@ venv/
 env/
 .virtualenv/
 
+# Python virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
 # LDIF files (generated)
 # Ignore all .ldf files except those in data/ldfs/
 *.ldf
@@ -62,4 +74,14 @@ logs/
 # Updated to reflect new structure
 data/csv/
 data/mlb/
-data/mlb/baseballdatabank/ 
+data/mlb/baseballdatabank/
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables
+.env
+.env.local 

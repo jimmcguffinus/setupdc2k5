@@ -1,0 +1,326 @@
+1,161c1,163
+< "SourceFile","AttributeName","AttributeType","Description","IsSingleValued"
+< "Fielding.csv","A","Integer","MLB: Assists - Number of times a fielder assists in an out.","True"
+< "Batting.csv","AB","Integer","MLB: At Bats - Number of times a player faces a pitcher.","True"
+< "TeamsFranchises.csv","active","String","MLB: Active Status - Indicates if a franchise is currently active.","True"
+< "Hardcoded","appearances","MultiValue","2025-03-22 MLB: Hardcoded MultiValue attribute","False"
+< "HomeGames.csv","attendance","Integer","MLB: Attendance - Total number of spectators at home games.","True"
+< "AwardsManagers.csv","awardID","String","MLB: Award ID - Identifier for a manager’s award.","True"
+< "HallOfFame.csv","ballots","String","MLB: Ballots - Number of ballots cast for Hall of Fame voting.","True"
+< "Pitching.csv","BAOpp","String","MLB: Batting Average Against - Opponents’ batting average against a pitcher.","True"
+< "People.csv","bats","String","MLB: Bats - Player’s batting hand (e.g., left, right, both).","True"
+< "Hardcoded","batting","MultiValue","2025-03-22 MLB: Hardcoded MultiValue attribute","False"
+< "Batting.csv","BB","Integer","MLB: Base on Balls - Number of walks a batter receives.","True"
+< "Teams.csv","BBA","Integer","MLB: Bases on Balls Allowed - Walks allowed by a team’s pitchers.","True"
+< "People.csv","bbrefID","String","MLB: Baseball-Reference ID - Unique identifier from Baseball-Reference.","True"
+< "Pitching.csv","BFP","Integer","MLB: Batters Faced by Pitcher - Total batters a pitcher faces.","True"
+< "People.csv","birthCity","String","MLB: Birth City - City where a player was born.","True"
+< "People.csv","birthCountry","String","MLB: Birth Country - Country where a player was born.","True"
+< "People.csv","birthDay","Integer","MLB: Birth Day - Day of the month a player was born.","True"
+< "People.csv","birthMonth","Integer","MLB: Birth Month - Month a player was born.","True"
+< "People.csv","birthState","String","MLB: Birth State - State where a player was born.","True"
+< "People.csv","birthYear","Integer","MLB: Birth Year - Year a player was born.","True"
+< "Pitching.csv","BK","Integer","MLB: Balks - Illegal pitching actions by a pitcher.","True"
+< "Teams.csv","BPF","Integer","MLB: Batter Park Factor - Effect of park on batting stats.","True"
+< "HallOfFame.csv","category","String","MLB: Category - Role or type for Hall of Fame nominee (e.g., player, manager).","True"
+< "Pitching.csv","CG","Integer","MLB: Complete Games - Games pitched entirely by one pitcher.","True"
+< "Parks.csv","city","String","MLB: City - Location city of a ballpark.","True"
+< "Batting.csv","CS","String","MLB: Caught Stealing - Times a runner is caught stealing a base.","True"
+< "People.csv","deathCity","String","MLB: Death City - City where a player passed away.","True"
+< "People.csv","deathCountry","String","MLB: Death Country - Country where a player passed away.","True"
+< "People.csv","deathDay","Integer","MLB: Death Day - Day of the month a player passed away.","True"
+< "People.csv","deathMonth","Integer","MLB: Death Month - Month a player passed away.","True"
+< "People.csv","deathState","String","MLB: Death State - State where a player passed away.","True"
+< "People.csv","deathYear","Integer","MLB: Death Year - Year a player passed away.","True"
+< "People.csv","debut","String","MLB: Debut - Date of a player’s first MLB game.","True"
+< "Teams.csv","divID","String","MLB: Division ID - Identifier for a team’s division.","True"
+< "Teams.csv","DivWin","String","MLB: Division Win - Indicates if a team won its division.","True"
+< "Fielding.csv","DP","Integer","MLB: Double Plays - Number of double plays a fielder participated in.","True"
+< "Fielding.csv","E","Integer","MLB: Errors - Number of fielding mistakes by a player.","True"
+< "Pitching.csv","ER","Integer","MLB: Earned Runs - Runs allowed by a pitcher due to hits/errors.","True"
+< "Pitching.csv","ERA","String","MLB: Earned Run Average - Average earned runs allowed per 9 innings.","True"
+< "Hardcoded","fielding","MultiValue","2025-03-22 MLB: Hardcoded MultiValue attribute","False"
+< "People.csv","finalGame","String","MLB: Final Game - Date of a player’s last MLB game.","True"
+< "Teams.csv","FP","String","MLB: Fielding Percentage - Ratio of successful fielding plays.","True"
+< "Teams.csv","franchID","String","MLB: Franchise ID - Unique identifier for a team franchise.","True"
+< "TeamsFranchises.csv","franchName","String","MLB: Franchise Name - Official name of a team franchise.","True"
+< "Batting.csv","G","Integer","MLB: Games - Number of games a player participated in.","True"
+< "Appearances.csv","G-1b","Integer","MLB: Games at First Base - Games played at first base.","True"
+< "Appearances.csv","G-2b","Integer","MLB: Games at Second Base - Games played at second base.","True"
+< "Appearances.csv","G-3b","Integer","MLB: Games at Third Base - Games played at third base.","True"
+< "Appearances.csv","G-all","Integer","MLB: Games All - Total games played in any role.","True"
+< "Appearances.csv","G-batting","Integer","MLB: Games Batting - Games where a player batted.","True"
+< "Appearances.csv","G-c","Integer","MLB: Games as Catcher - Games played as a catcher.","True"
+< "Appearances.csv","G-cf","Integer","MLB: Games in Center Field - Games played in center field.","True"
+< "Appearances.csv","G-defense","Integer","MLB: Games on Defense - Games played in a defensive position.","True"
+< "Appearances.csv","G-dh","Integer","MLB: Games as Designated Hitter - Games played as a DH.","True"
+< "Appearances.csv","G-lf","Integer","MLB: Games in Left Field - Games played in left field.","True"
+< "Appearances.csv","G-of","Integer","MLB: Games in Outfield - Total games played in the outfield.","True"
+< "Appearances.csv","G-p","Integer","MLB: Games as Pitcher - Games pitched.","True"
+< "Appearances.csv","G-ph","Integer","MLB: Games as Pinch Hitter - Games batted as a substitute.","True"
+< "Appearances.csv","G-pr","Integer","MLB: Games as Pinch Runner - Games run as a substitute.","True"
+< "Appearances.csv","G-rf","Integer","MLB: Games in Right Field - Games played in right field.","True"
+< "Appearances.csv","G-ss","Integer","MLB: Games at Shortstop - Games played at shortstop.","True"
+< "AllstarFull.csv","gameID","String","MLB: Game ID - Unique identifier for an All-Star game.","True"
+< "AllstarFull.csv","gameNum","Integer","MLB: Game Number - Number of All-Star games in a season.","True"
+< "HomeGames.csv","games","Integer","MLB: Games - Number of home games played.","True"
+< "FieldingOF.csv","Gcf","Integer","MLB: Games in Center Field - Outfield games in center.","True"
+< "Pitching.csv","GF","Integer","MLB: Games Finished - Games a pitcher completed.","True"
+< "Teams.csv","Ghome","Integer","MLB: Home Games - Number of games played at home.","True"
+< "Batting.csv","GIDP","Integer","MLB: Grounded Into Double Play - Times a batter hits into a double play.","True"
+< "FieldingOF.csv","Glf","Integer","MLB: Games in Left Field - Outfield games in left.","True"
+< "AllstarFull.csv","GP","Integer","MLB: Games Played - All-Star games a player participated in.","True"
+< "FieldingOF.csv","Grf","Integer","MLB: Games in Right Field - Outfield games in right.","True"
+< "Appearances.csv","GS","Integer","MLB: Games Started - Games a player started.","True"
+< "Batting.csv","H","Integer","MLB: Hits - Number of successful hits by a batter.","True"
+< "Teams.csv","HA","Integer","MLB: Hits Allowed - Hits allowed by a team’s pitchers.","True"
+< "ManagersHalf.csv","half","Integer","MLB: Half - Season half (1st or 2nd) for manager stats.","True"
+< "Batting.csv","HBP","Integer","MLB: Hit By Pitch - Times a batter is hit by a pitch.","True"
+< "People.csv","height","Integer","MLB: Height - Player’s height in inches.","True"
+< "Batting.csv","HR","Integer","MLB: Home Runs - Number of home runs hit by a batter.","True"
+< "Teams.csv","HRA","Integer","MLB: Home Runs Allowed - Home runs allowed by a team’s pitchers.","True"
+< "Batting.csv","IBB","Integer","MLB: Intentional Base on Balls - Intentional walks given to a batter.","True"
+< "HallOfFame.csv","inducted","String","MLB: Inducted - Indicates if a person was inducted into the Hall of Fame.","True"
+< "Fielding.csv","InnOuts","Integer","MLB: Innings Outs - Total outs recorded while fielding.","True"
+< "Managers.csv","inseason","Integer","MLB: In-Season - Manager’s order of appointment within a season.","True"
+< "Pitching.csv","IPouts","Integer","MLB: Innings Pitched Outs - Total outs pitched by a pitcher.","True"
+< "Managers.csv","L","Integer","MLB: Losses - Number of games lost under a manager.","True"
+< "HomeGames.csv","league-key","String","MLB: League Key - Identifier for a team’s league.","True"
+< "AllstarFull.csv","lgID","String","MLB: League ID - Identifier for a player’s league.","True"
+< "SeriesPost.csv","lgIDloser","String","MLB: League ID Loser - League of the losing team in postseason.","True"
+< "SeriesPost.csv","lgIDwinner","String","MLB: League ID Winner - League of the winning team in postseason.","True"
+< "Teams.csv","LgWin","String","MLB: League Win - Indicates if a team won its league.","True"
+< "SeriesPost.csv","losses","Integer","MLB: Losses - Number of losses in a postseason series.","True"
+< "Parks.csv","mlbCountry","String","2025-03-22 MLB: Attribute from Parks.csv","True"
+< "TeamsFranchises.csv","NAassoc","String","MLB: National Association - Associated NA franchise.","True"
+< "Teams.csv","name","String","MLB: Team Name - Official name of a team.","True"
+< "Schools.csv","name-full","String","MLB: Full Name - Full name of a school.","True"
+< "People.csv","nameFirst","String","MLB: First Name - Player’s first name.","True"
+< "People.csv","nameGiven","String","MLB: Given Name - Player’s full given name.","True"
+< "People.csv","nameLast","String","MLB: Last Name - Player’s last name.","True"
+< "HallOfFame.csv","needed","String","MLB: Needed Votes - Votes required for Hall of Fame induction.","True"
+< "HallOfFame.csv","needed-note","String","MLB: Needed Note - Additional notes on vote requirements.","True"
+< "AwardsManagers.csv","notes","String","MLB: Notes - Additional comments on manager awards.","True"
+< "HomeGames.csv","openings","Integer","MLB: Openings - Number of opening games at home.","True"
+< "Teams.csv","park","String","MLB: Park - Name of a team’s home ballpark.","True"
+< "Parks.csv","park-alias","String","MLB: Park Alias - Alternative name for a ballpark.","True"
+< "HomeGames.csv","park-key","String","MLB: Park Key - Unique identifier for a ballpark.","True"
+< "Parks.csv","park-name","String","MLB: Park Name - Official name of a ballpark.","True"
+< "Fielding.csv","PB","String","MLB: Passed Balls - Balls a catcher fails to catch.","True"
+< "Hardcoded","pitching","MultiValue","2025-03-22 MLB: Hardcoded MultiValue attribute","False"
+< "AllstarFull.csv","playerID","String","MLB: Player ID - Unique identifier for a player.","True"
+< "Managers.csv","plyrMgr","String","MLB: Player-Manager - Indicates if a manager also played.","True"
+< "Fielding.csv","PO","Integer","MLB: Putouts - Number of outs recorded by a fielder.","True"
+< "AwardsShareManagers.csv","pointsMax","Integer","MLB: Maximum Points - Total possible points for an award.","True"
+< "AwardsShareManagers.csv","pointsWon","String","MLB: Points Won - Points received for an award.","True"
+< "Fielding.csv","POS","String","MLB: Position - Fielding position played.","True"
+< "Teams.csv","PPF","Integer","MLB: Pitcher Park Factor - Effect of park on pitching stats.","True"
+< "Batting.csv","R","Integer","MLB: Runs - Number of runs scored by a player.","True"
+< "Teams.csv","RA","Integer","MLB: Runs Allowed - Runs allowed by a team.","True"
+< "Managers.csv","rank","Integer","MLB: Rank - Manager’s team ranking in standings.","True"
+< "Batting.csv","RBI","Integer","MLB: Runs Batted In - Runs driven in by a batter.","True"
+< "People.csv","retroID","String","MLB: Retro ID - Unique identifier from Retrosheet.","True"
+< "BattingPost.csv","round","String","MLB: Round - Postseason round (e.g., World Series).","True"
+< "Salaries.csv","salary","Integer","MLB: Salary - Player’s annual salary.","True"
+< "Batting.csv","SB","String","MLB: Stolen Bases - Bases successfully stolen by a player.","True"
+< "CollegePlaying.csv","schoolID","String","MLB: School ID - Identifier for a player’s college.","True"
+< "Batting.csv","SF","Integer","MLB: Sacrifice Flies - Fly balls that score a run.","True"
+< "Batting.csv","SH","Integer","MLB: Sacrifice Hits - Bunts that advance a runner.","True"
+< "Pitching.csv","SHO","Integer","MLB: Shutouts - Games pitched with no runs allowed.","True"
+< "Batting.csv","SO","Integer","MLB: Strikeouts - Times a batter strikes out.","True"
+< "Teams.csv","SOA","Integer","MLB: Strikeouts Allowed - Strikeouts by a team’s pitchers.","True"
+< "HomeGames.csv","span-first","String","MLB: Span First - Start date of home game span.","True"
+< "HomeGames.csv","span-last","String","MLB: Span Last - End date of home game span.","True"
+< "AllstarFull.csv","startingPos","Integer","MLB: Starting Position - Position a player started in All-Star game.","True"
+< "Parks.csv","state","String","MLB: State - State where a ballpark is located.","True"
+< "Batting.csv","stint","Integer","MLB: Stint - Order of a player’s team stint in a season.","True"
+< "Pitching.csv","SV","Integer","MLB: Saves - Games a pitcher preserves a lead.","True"
+< "HomeGames.csv","team-key","String","MLB: Team Key - Unique identifier for a team.","True"
+< "AllstarFull.csv","teamID","String","MLB: Team ID - Identifier for a player’s team.","True"
+< "Teams.csv","teamIDBR","String","MLB: Team ID BR - Baseball-Reference team identifier.","True"
+< "Teams.csv","teamIDlahman45","String","MLB: Team ID Lahman - Lahman database team identifier.","True"
+< "SeriesPost.csv","teamIDloser","String","MLB: Team ID Loser - Identifier for losing team in postseason.","True"
+< "Teams.csv","teamIDretro","String","MLB: Team ID Retro - Retrosheet team identifier.","True"
+< "SeriesPost.csv","teamIDwinner","String","MLB: Team ID Winner - Identifier for winning team in postseason.","True"
+< "People.csv","throws","String","MLB: Throws - Player’s throwing hand (e.g., left, right).","True"
+< "AwardsManagers.csv","tie","String","MLB: Tie - Indicates if an award vote was tied.","True"
+< "SeriesPost.csv","ties","Integer","MLB: Ties - Number of tied games in a postseason series.","True"
+< "FieldingPost.csv","TP","Integer","MLB: Triple Plays - Number of triple plays in postseason.","True"
+< "HallOfFame.csv","votedBy","String","MLB: Voted By - Group or committee voting for Hall of Fame.","True"
+< "HallOfFame.csv","votes","String","MLB: Votes - Number of votes received for Hall of Fame.","True"
+< "AwardsShareManagers.csv","votesFirst","String","MLB: First Place Votes - Number of first-place award votes.","True"
+< "Managers.csv","W","Integer","MLB: Wins - Number of games won under a manager.","True"
+< "Teams.csv","WCWin","String","MLB: Wild Card Win - Indicates if a team won a wild card.","True"
+< "People.csv","weight","Integer","MLB: Weight - Player’s weight in pounds.","True"
+< "SeriesPost.csv","wins","Integer","MLB: Wins - Number of wins in a postseason series.","True"
+< "Fielding.csv","WP","String","MLB: Wild Pitches - Pitches a catcher cannot control.","True"
+< "Teams.csv","WSWin","String","MLB: World Series Win - Indicates if a team won the World Series.","True"
+< "Batting.csv","X2B","Integer","MLB: Doubles - Number of two-base hits by a batter.","True"
+< "Batting.csv","X3B","Integer","MLB: Triples - Number of three-base hits by a batter.","True"
+< "HomeGames.csv","year-key","Integer","MLB: Year Key - Year of home game data.","True"
+< "AllstarFull.csv","yearID","Integer","MLB: Year ID - Year of an All-Star game or event.","True"
+< "Fielding.csv","ZR","String","MLB: Zone Rating - Measure of fielding range efficiency.","True"
+---
+> SourceFile,AttributeName,AttributeType,Description,IsSingleValued
+> Fielding.csv,A,Integer,MLB: Assists - Number of times a fielder assists in an out.,True
+> Batting.csv,AB,Integer,MLB: At Bats - Number of times a player faces a pitcher.,True
+> Pitching.csv,BAOpp,String,MLB: Batting Average Against - Opponents’ batting average against a pitcher.,True
+> Batting.csv,BB,Integer,MLB: Base on Balls - Number of walks a batter receives.,True
+> Teams.csv,BBA,Integer,MLB: Bases on Balls Allowed - Walks allowed by a team’s pitchers.,True
+> Pitching.csv,BFP,String,MLB: Batters Faced by Pitcher - Total batters a pitcher faces.,True
+> Pitching.csv,BK,String,MLB: Balks - Illegal pitching actions by a pitcher.,True
+> Teams.csv,BPF,Integer,MLB: Batter Park Factor - Effect of park on batting stats.,True
+> Pitching.csv,CG,Integer,MLB: Complete Games - Games pitched entirely by one pitcher.,True
+> Batting.csv,CS,String,MLB: Caught Stealing - Times a runner is caught stealing a base.,True
+> Fielding.csv,DP,Integer,MLB: Double Plays - Number of double plays a fielder participated in.,True
+> Teams.csv,DivWin,String,MLB: Division Win - Indicates if a team won its division.,True
+> Fielding.csv,E,String,MLB: Errors - Number of fielding mistakes by a player.,True
+> Pitching.csv,ER,Integer,MLB: Earned Runs - Runs allowed by a pitcher due to hits/errors.,True
+> Pitching.csv,ERA,String,MLB: Earned Run Average - Average earned runs allowed per 9 innings.,True
+> Teams.csv,FP,String,MLB: Fielding Percentage - Ratio of successful fielding plays.,True
+> Batting.csv,G,Integer,MLB: Games - Number of games a player participated in.,True
+> Appearances.csv,G-1b,Integer,MLB: Games at First Base - Games played at first base.,True
+> Appearances.csv,G-2b,Integer,MLB: Games at Second Base - Games played at second base.,True
+> Appearances.csv,G-3b,Integer,MLB: Games at Third Base - Games played at third base.,True
+> Appearances.csv,G-all,Integer,MLB: Games All - Total games played in any role.,True
+> Appearances.csv,G-batting,Integer,MLB: Games Batting - Games where a player batted.,True
+> Appearances.csv,G-c,Integer,MLB: Games as Catcher - Games played as a catcher.,True
+> Appearances.csv,G-cf,Integer,MLB: Games in Center Field - Games played in center field.,True
+> Appearances.csv,G-defense,String,MLB: Games on Defense - Games played in a defensive position.,True
+> Appearances.csv,G-dh,String,MLB: Games as Designated Hitter - Games played as a DH.,True
+> Appearances.csv,G-lf,Integer,MLB: Games in Left Field - Games played in left field.,True
+> Appearances.csv,G-of,Integer,MLB: Games in Outfield - Total games played in the outfield.,True
+> Appearances.csv,G-p,Integer,MLB: Games as Pitcher - Games pitched.,True
+> Appearances.csv,G-ph,String,MLB: Games as Pinch Hitter - Games batted as a substitute.,True
+> Appearances.csv,G-pr,String,MLB: Games as Pinch Runner - Games run as a substitute.,True
+> Appearances.csv,G-rf,Integer,MLB: Games in Right Field - Games played in right field.,True
+> Appearances.csv,G-ss,Integer,MLB: Games at Shortstop - Games played at shortstop.,True
+> Pitching.csv,GF,Integer,MLB: Games Finished - Games a pitcher completed.,True
+> Batting.csv,GIDP,String,MLB: Grounded Into Double Play - Times a batter hits into a double play.,True
+> AllstarFull.csv,GP,Integer,MLB: Games Played - All-Star games a player participated in.,True
+> Appearances.csv,GS,String,MLB: Games Started - Games a player started.,True
+> FieldingOF.csv,Gcf,String,MLB: Games in Center Field - Outfield games in center.,True
+> Teams.csv,Ghome,String,MLB: Home Games - Number of games played at home.,True
+> FieldingOF.csv,Glf,String,MLB: Games in Left Field - Outfield games in left.,True
+> FieldingOF.csv,Grf,String,MLB: Games in Right Field - Outfield games in right.,True
+> Batting.csv,H,Integer,MLB: Hits - Number of successful hits by a batter.,True
+> Teams.csv,HA,Integer,MLB: Hits Allowed - Hits allowed by a team’s pitchers.,True
+> Batting.csv,HBP,String,MLB: Hit By Pitch - Times a batter is hit by a pitch.,True
+> Batting.csv,HR,Integer,MLB: Home Runs - Number of home runs hit by a batter.,True
+> Teams.csv,HRA,Integer,MLB: Home Runs Allowed - Home runs allowed by a team’s pitchers.,True
+> TeamsHalf.csv,Half,Integer,2025-03-22 MLB: Attribute from TeamsHalf.csv,True
+> Batting.csv,IBB,String,MLB: Intentional Base on Balls - Intentional walks given to a batter.,True
+> Pitching.csv,IPouts,Integer,MLB: Innings Pitched Outs - Total outs pitched by a pitcher.,True
+> Fielding.csv,InnOuts,String,MLB: Innings Outs - Total outs recorded while fielding.,True
+> Managers.csv,L,Integer,MLB: Losses - Number of games lost under a manager.,True
+> Teams.csv,LgWin,String,MLB: League Win - Indicates if a team won its league.,True
+> TeamsFranchises.csv,NAassoc,String,MLB: National Association - Associated NA franchise.,True
+> Fielding.csv,PB,String,MLB: Passed Balls - Balls a catcher fails to catch.,True
+> Fielding.csv,PO,Integer,MLB: Putouts - Number of outs recorded by a fielder.,True
+> Fielding.csv,POS,String,MLB: Position - Fielding position played.,True
+> Teams.csv,PPF,Integer,MLB: Pitcher Park Factor - Effect of park on pitching stats.,True
+> Batting.csv,R,Integer,MLB: Runs - Number of runs scored by a player.,True
+> Teams.csv,RA,Integer,MLB: Runs Allowed - Runs allowed by a team.,True
+> Batting.csv,RBI,String,MLB: Runs Batted In - Runs driven in by a batter.,True
+> Teams.csv,Rank,Integer,2025-03-22 MLB: Attribute from Teams.csv,True
+> Batting.csv,SB,String,MLB: Stolen Bases - Bases successfully stolen by a player.,True
+> Batting.csv,SF,String,MLB: Sacrifice Flies - Fly balls that score a run.,True
+> Batting.csv,SH,String,MLB: Sacrifice Hits - Bunts that advance a runner.,True
+> Pitching.csv,SHO,Integer,MLB: Shutouts - Games pitched with no runs allowed.,True
+> Batting.csv,SO,String,MLB: Strikeouts - Times a batter strikes out.,True
+> Teams.csv,SOA,Integer,MLB: Strikeouts Allowed - Strikeouts by a team’s pitchers.,True
+> Pitching.csv,SV,Integer,MLB: Saves - Games a pitcher preserves a lead.,True
+> FieldingPost.csv,TP,Integer,MLB: Triple Plays - Number of triple plays in postseason.,True
+> Managers.csv,W,Integer,MLB: Wins - Number of games won under a manager.,True
+> Teams.csv,WCWin,String,MLB: Wild Card Win - Indicates if a team won a wild card.,True
+> Fielding.csv,WP,String,MLB: Wild Pitches - Pitches a catcher cannot control.,True
+> Teams.csv,WSWin,String,MLB: World Series Win - Indicates if a team won the World Series.,True
+> Batting.csv,X2B,Integer,MLB: Doubles - Number of two-base hits by a batter.,True
+> Batting.csv,X3B,Integer,MLB: Triples - Number of three-base hits by a batter.,True
+> Fielding.csv,ZR,String,MLB: Zone Rating - Measure of fielding range efficiency.,True
+> TeamsFranchises.csv,active,String,MLB: Active Status - Indicates if a franchise is currently active.,True
+> Hardcoded,appearances,MultiValue,2025-03-22 MLB: Hardcoded MultiValue attribute,False
+> HomeGames.csv,attendance,String,MLB: Attendance - Total number of spectators at home games.,True
+> AwardsManagers.csv,awardID,String,MLB: Award ID - Identifier for a manager’s award.,True
+> HallOfFame.csv,ballots,String,MLB: Ballots - Number of ballots cast for Hall of Fame voting.,True
+> People.csv,bats,String,"MLB: Bats - Player’s batting hand (e.g., left, right, both).",True
+> Hardcoded,batting,MultiValue,2025-03-22 MLB: Hardcoded MultiValue attribute,False
+> People.csv,bbrefID,String,MLB: Baseball-Reference ID - Unique identifier from Baseball-Reference.,True
+> People.csv,birthCity,String,MLB: Birth City - City where a player was born.,True
+> People.csv,birthCountry,String,MLB: Birth Country - Country where a player was born.,True
+> People.csv,birthDay,String,MLB: Birth Day - Day of the month a player was born.,True
+> People.csv,birthMonth,String,MLB: Birth Month - Month a player was born.,True
+> People.csv,birthState,String,MLB: Birth State - State where a player was born.,True
+> People.csv,birthYear,String,MLB: Birth Year - Year a player was born.,True
+> HallOfFame.csv,category,String,"MLB: Category - Role or type for Hall of Fame nominee (e.g., player, manager).",True
+> Parks.csv,city,String,MLB: City - Location city of a ballpark.,True
+> People.csv,deathCity,String,MLB: Death City - City where a player passed away.,True
+> People.csv,deathCountry,String,MLB: Death Country - Country where a player passed away.,True
+> People.csv,deathDay,String,MLB: Death Day - Day of the month a player passed away.,True
+> People.csv,deathMonth,String,MLB: Death Month - Month a player passed away.,True
+> People.csv,deathState,String,MLB: Death State - State where a player passed away.,True
+> People.csv,deathYear,String,MLB: Death Year - Year a player passed away.,True
+> People.csv,debut,String,MLB: Debut - Date of a player’s first MLB game.,True
+> Teams.csv,divID,String,MLB: Division ID - Identifier for a team’s division.,True
+> Hardcoded,fielding,MultiValue,2025-03-22 MLB: Hardcoded MultiValue attribute,False
+> People.csv,finalGame,String,MLB: Final Game - Date of a player’s last MLB game.,True
+> Teams.csv,franchID,String,MLB: Franchise ID - Unique identifier for a team franchise.,True
+> TeamsFranchises.csv,franchName,String,MLB: Franchise Name - Official name of a team franchise.,True
+> AllstarFull.csv,gameID,String,MLB: Game ID - Unique identifier for an All-Star game.,True
+> AllstarFull.csv,gameNum,Integer,MLB: Game Number - Number of All-Star games in a season.,True
+> HomeGames.csv,games,Integer,MLB: Games - Number of home games played.,True
+> ManagersHalf.csv,half,Integer,MLB: Half - Season half (1st or 2nd) for manager stats.,True
+> People.csv,height,String,MLB: Height - Player’s height in inches.,True
+> HallOfFame.csv,inducted,String,MLB: Inducted - Indicates if a person was inducted into the Hall of Fame.,True
+> Managers.csv,inseason,Integer,MLB: In-Season - Manager’s order of appointment within a season.,True
+> HomeGames.csv,league-key,String,MLB: League Key - Identifier for a team’s league.,True
+> AllstarFull.csv,lgID,String,MLB: League ID - Identifier for a player’s league.,True
+> SeriesPost.csv,lgIDloser,String,MLB: League ID Loser - League of the losing team in postseason.,True
+> SeriesPost.csv,lgIDwinner,String,MLB: League ID Winner - League of the winning team in postseason.,True
+> SeriesPost.csv,losses,Integer,MLB: Losses - Number of losses in a postseason series.,True
+> Parks.csv,mlbCountry,String,2025-03-22 MLB: Attribute from Parks.csv,True
+> Teams.csv,name,String,MLB: Team Name - Official name of a team.,True
+> Schools.csv,name-full,String,MLB: Full Name - Full name of a school.,True
+> People.csv,nameFirst,String,MLB: First Name - Player’s first name.,True
+> People.csv,nameGiven,String,MLB: Given Name - Player’s full given name.,True
+> People.csv,nameLast,String,MLB: Last Name - Player’s last name.,True
+> HallOfFame.csv,needed,String,MLB: Needed Votes - Votes required for Hall of Fame induction.,True
+> HallOfFame.csv,needed-note,String,MLB: Needed Note - Additional notes on vote requirements.,True
+> AwardsManagers.csv,notes,String,MLB: Notes - Additional comments on manager awards.,True
+> HomeGames.csv,openings,Integer,MLB: Openings - Number of opening games at home.,True
+> Teams.csv,park,String,MLB: Park - Name of a team’s home ballpark.,True
+> Parks.csv,park-alias,String,MLB: Park Alias - Alternative name for a ballpark.,True
+> HomeGames.csv,park-key,String,MLB: Park Key - Unique identifier for a ballpark.,True
+> Parks.csv,park-name,String,MLB: Park Name - Official name of a ballpark.,True
+> Hardcoded,pitching,MultiValue,2025-03-22 MLB: Hardcoded MultiValue attribute,False
+> AllstarFull.csv,playerID,String,MLB: Player ID - Unique identifier for a player.,True
+> Managers.csv,plyrMgr,String,MLB: Player-Manager - Indicates if a manager also played.,True
+> AwardsShareManagers.csv,pointsMax,String,MLB: Maximum Points - Total possible points for an award.,True
+> AwardsShareManagers.csv,pointsWon,String,MLB: Points Won - Points received for an award.,True
+> Managers.csv,rank,Integer,MLB: Rank - Manager’s team ranking in standings.,True
+> People.csv,retroID,String,MLB: Retro ID - Unique identifier from Retrosheet.,True
+> BattingPost.csv,round,String,"MLB: Round - Postseason round (e.g., World Series).",True
+> Salaries.csv,salary,Integer,MLB: Salary - Player’s annual salary.,True
+> CollegePlaying.csv,schoolID,String,MLB: School ID - Identifier for a player’s college.,True
+> HomeGames.csv,span-first,String,MLB: Span First - Start date of home game span.,True
+> HomeGames.csv,span-last,String,MLB: Span Last - End date of home game span.,True
+> AllstarFull.csv,startingPos,String,MLB: Starting Position - Position a player started in All-Star game.,True
+> Parks.csv,state,String,MLB: State - State where a ballpark is located.,True
+> Batting.csv,stint,Integer,MLB: Stint - Order of a player’s team stint in a season.,True
+> HomeGames.csv,team-key,String,MLB: Team Key - Unique identifier for a team.,True
+> AllstarFull.csv,teamID,String,MLB: Team ID - Identifier for a player’s team.,True
+> Teams.csv,teamIDBR,String,MLB: Team ID BR - Baseball-Reference team identifier.,True
+> Teams.csv,teamIDlahman45,String,MLB: Team ID Lahman - Lahman database team identifier.,True
+> SeriesPost.csv,teamIDloser,String,MLB: Team ID Loser - Identifier for losing team in postseason.,True
+> Teams.csv,teamIDretro,String,MLB: Team ID Retro - Retrosheet team identifier.,True
+> SeriesPost.csv,teamIDwinner,String,MLB: Team ID Winner - Identifier for winning team in postseason.,True
+> People.csv,throws,String,"MLB: Throws - Player’s throwing hand (e.g., left, right).",True
+> AwardsManagers.csv,tie,String,MLB: Tie - Indicates if an award vote was tied.,True
+> SeriesPost.csv,ties,Integer,MLB: Ties - Number of tied games in a postseason series.,True
+> HallOfFame.csv,votedBy,String,MLB: Voted By - Group or committee voting for Hall of Fame.,True
+> HallOfFame.csv,votes,String,MLB: Votes - Number of votes received for Hall of Fame.,True
+> AwardsShareManagers.csv,votesFirst,String,MLB: First Place Votes - Number of first-place award votes.,True
+> People.csv,weight,String,MLB: Weight - Player’s weight in pounds.,True
+> SeriesPost.csv,wins,Integer,MLB: Wins - Number of wins in a postseason series.,True
+> HomeGames.csv,year-key,Integer,MLB: Year Key - Year of home game data.,True
+> AllstarFull.csv,yearID,Integer,MLB: Year ID - Year of an All-Star game or event.,True
