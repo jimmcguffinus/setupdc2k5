@@ -1,5 +1,0 @@
-dn: CN=Hank Aaron,OU=Players,OU=MLB,DC=mlb,DC=dev
-changetype: modify
-add: state
-state: GA
--
